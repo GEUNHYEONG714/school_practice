@@ -116,22 +116,20 @@ Python을 활용하여 구조적 프로그래밍의 핵심 원리를 익히고, 
 | ex07_while.py | while 반복 |
 | ex08_break_continue.py | break/continue |
 
-**실습**
-| 파일 | 내용 |
-|------|------|
-| p01.py | 홀짝 판별기 |
-| p02.py | 성적 등급 |
-| p03.py | 구구단 출력 |
-| p04.py | 숫자 맞추기 게임 |
-| p05.py | 별 찍기 |
-| p06.py | 가위바위보 |
-| p07.py | 카운트다운 |
-| p08.py | 짝수 합계 |
-| p09.py | 비밀번호 확인 |
-| p10.py | 메뉴 주문 시스템 |
-| p11.py | 약수 구하기 |
-| p12.py | 숫자 피라미드 |
-| p13.py | 미니 성적 관리 |
+**실습 (170문제, 10개 카테고리)**
+
+| 폴더 | 주제 | 문제 수 |
+|------|------|---------|
+| `01_if/` | 단일 if문 | 8 |
+| `02_if_else/` | if-else문 | 8 |
+| `03_if_elif_else/` | if-elif-else문 | 10 |
+| `04_nested_if/` | 중첩 조건문 | 8 |
+| `05_for/` | for문 | 10 |
+| `06_while/` | while문 | 8 |
+| `07_break_continue/` | break/continue | 8 |
+| `08_nested_loop/` | 중첩 반복문 | 10 |
+| `09_combo_basic/` | 흐름제어 복합 (초급) | 52 |
+| `10_combo_intermediate/` | 흐름제어 복합 (중급) | 50 |
 
 ## 디렉토리 구조
 
