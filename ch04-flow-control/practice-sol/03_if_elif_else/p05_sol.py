@@ -1,5 +1,5 @@
 """
-실습 6 풀이: BMI 판정
+실습 5 풀이: BMI 판정
 """
 
 height = float(input("키를 입력하세요 (cm): "))
