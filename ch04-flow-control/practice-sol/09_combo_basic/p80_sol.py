@@ -14,7 +14,7 @@ for ch in s:
     elif ch == ")":
         close_count += 1
 
-# 개수가 같으면 올바름
+# 개수가 같으면 올바름 (괄호가 하나도 없는 경우 0 == 0 이므로 "올바름"이 출력됨)
 if open_count == close_count:
     print("올바름")
 else:

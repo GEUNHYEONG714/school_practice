@@ -13,16 +13,16 @@ while money >= 500:
 
     choice = int(input("음료를 선택하세요: "))
 
-    # 선택한 음료의 가격 확인
+    # 선택한 음료의 가격과 안내 문구 확인 (조사 주의: 물→을, 주스/커피→를)
     if choice == 1:
         price = 500
-        name = "물"
+        message = "물을 선택했습니다."
     elif choice == 2:
         price = 1000
-        name = "주스"
+        message = "주스를 선택했습니다."
     elif choice == 3:
         price = 1500
-        name = "커피"
+        message = "커피를 선택했습니다."
     else:
         print("잘못된 선택입니다.")
         continue  # 다시 선택
@@ -30,7 +30,7 @@ while money >= 500:
     # 잔액 부족 여부 확인
     if money >= price:
         money -= price
-        print(name + "를 선택했습니다.")
+        print(message)
     else:
         print("잔액이 부족합니다.")
         break

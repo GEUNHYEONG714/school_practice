@@ -25,7 +25,9 @@ while True:
             print("대기 중인 고객이 없습니다.")
         else:
             last_called = last_called + 1
-            print(str(last_called) + "번 고객님, 오세요!")
+            # 창구 번호: 3개 창구를 순환 (첫 호출은 2번 창구부터 시작)
+            window = (last_called % 3) + 1
+            print(str(window) + "번 창구: " + str(last_called) + "번 고객님, 오세요!")
 
     elif menu == 3:
         # 대기인원 확인
