@@ -27,5 +27,10 @@ test/
 # Agent eval (개인 검토용)
 agent-eval/
 
+# Claude Code
+.claude/
+CLAUDE.md
+.claude.local.json
+
 # 배포용 zip
 *.zip
