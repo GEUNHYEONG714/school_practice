@@ -24,5 +24,8 @@ Thumbs.db
 # Test (개인 연습용)
 test/
 
+# Agent eval (개인 검토용)
+agent-eval/
+
 # 배포용 zip
 *.zip
