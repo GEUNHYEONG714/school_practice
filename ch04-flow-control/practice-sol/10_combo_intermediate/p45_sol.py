@@ -11,7 +11,11 @@ trap1 = 3     # 함정 → 위치 0으로
 trap2 = 7     # 함정 → 위치 4로
 treasure = 5  # 보물 → 점수 +10
 exit_pos = 9  # 탈출구
-got_treasure = 0  # 보물 획득 여부 (중복 방지)
+
+# 트리거 가능 여부 (1=발동 가능, 0=이미 발동되어 통과만)
+trap1_active = 1
+trap2_active = 1
+got_treasure = 0
 
 print("=== 1차원 미로 탈출 ===")
 print("탈출구는 위치 9입니다. 함정을 피하고 보물을 찾으세요!")
@@ -37,13 +41,15 @@ while pos != exit_pos:
     pos = new_pos
     moves += 1
 
-    # 함정/보물/탈출구 확인
-    if pos == trap1:
+    # 함정/보물/탈출구 확인 (각 트리거는 첫 진입 시 한 번만)
+    if pos == trap1 and trap1_active == 1:
         print("함정! 위치 0으로 되돌아갑니다!")
         pos = 0
-    elif pos == trap2:
+        trap1_active = 0
+    elif pos == trap2 and trap2_active == 1:
         print("함정! 위치 4로 되돌아갑니다!")
         pos = 4
+        trap2_active = 0
     elif pos == treasure and got_treasure == 0:
         print("보물 발견! 점수 +10!")
         score += 10
