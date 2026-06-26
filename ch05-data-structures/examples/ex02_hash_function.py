@@ -3,6 +3,14 @@
 # hash(x) → 값을 고정된 정수로 변환하는 함수.
 # 이 정수로 "어디에 저장할지" 한 번에 정해진다.
 
+import os
+import sys
+import subprocess
+
+if os.environ.get("PYTHONHASHSEED") != "42":
+    os.environ["PYTHONHASHSEED"] = "42"
+    sys.exit(subprocess.run([sys.executable] + sys.argv).returncode)
+
 # --- 1. hash의 기본 특징 ---
 
 # 같은 값 → 항상 같은 hash
