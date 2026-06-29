@@ -4,7 +4,7 @@
 
 p01(공휴일)은 '리스트 안에 dict가 여러 개'였습니다.
 이번에는 dict 안쪽으로 한 단계 더 들어가 보는 연습입니다.
-  → "dict → 리스트 → dict" 순서로 접근해 원하는 값을 꺼냅니다.
+  → "dict → list → dict" 순서로 접근해 원하는 값을 꺼냅니다.
 
 [받아올 데이터]
   스포츠 정보 서버(TheSportsDB)에서 KBO 야구팀 정보를 검색합니다.
@@ -36,7 +36,7 @@ p01(공휴일)은 '리스트 안에 dict가 여러 개'였습니다.
        창단 연도(intFormedYear), 홈구장(strStadium), 연고지(strLocation)
 
 힌트:
-  - 검색 조건은 dict로 만들어 requests.get(URL, params=...) 처럼 넘긴다.
+  - 검색 조건은 dict로 만들어 requests.get(URL, params=...)처럼 넘긴다.
   - data["teams"]는 list이므로 [0]을 붙여 첫 번째 팀 dict를 꺼낸다.
   - 없을 수도 있는 값은 team.get("키", "기본값")으로 안전하게 꺼낸다.
   - 좋아하는 다른 팀: "LG Twins", "Kia Tigers", "Lotte Giants",
@@ -47,10 +47,10 @@ p01(공휴일)은 '리스트 안에 dict가 여러 개'였습니다.
 import requests
 
 URL = "https://www.thesportsdb.com/api/v1/json/3/searchteams.php"
-team_name = "Doosan Bears"   # 원하는 팀으로 바꿔 보세요
+team_name = "Doosan Bears"   # 원하는 팀으로 바꿔 보세요.
 
 # 아래에 코드를 작성하세요.
-# 1) t=team_name 조건으로 요청해서 JSON(dict) 받기
+# 1) t=team_name 조건으로 요청해 JSON(dict) 받기
 # 2) data["teams"][0]으로 팀 dict 꺼내기
 # 3) 원하는 키만 골라 출력하기
 

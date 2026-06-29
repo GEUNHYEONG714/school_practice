@@ -1,7 +1,7 @@
 # [실무] 재고 관리 — 중첩 dict 다루기 (dict 안의 dict)
 #
 # 상품 코드(키)마다 상세 정보(dict)를 연결한 구조다.
-# 데이터베이스에서 읽어온 테이블을 메모리에 올린 모습과 비슷하다.
+# 데이터베이스에서 읽어 온 테이블을 메모리에 올린 모습과 비슷하다.
 
 # 상품 코드 → 상품 정보(dict). 상품 정보 안에는 크기 tuple도 들어 있다.
 inventory = {
@@ -13,12 +13,12 @@ inventory = {
 # --- 1. 특정 상품 정보 꺼내기 ---
 item = inventory["A001"]
 print(f"{item['name']} — 재고 {item['stock']}개, {item['price']:,}원")
-w, d, h = item["size"]                       # 튜플 언패킹 (가로, 세로, 높이)
+w, d, h = item["size"]                       # tuple 언패킹 (가로, 세로, 높이)
 print(f"크기: {w} x {d} x {h} cm")
 
 
 print()
-# --- 2. 전체 순회: 키와 값(dict)을 함께 사용 ---
+# --- 2. 전체 순회: 키와 값(dict)을 함께 사용하기 ---
 print("[전체 재고]")
 for code, info in inventory.items():
     status = "품절" if info["stock"] == 0 else f"{info['stock']}개"
@@ -34,7 +34,7 @@ print("노트 재고:", inventory["A002"]["stock"])
 print()
 # --- 4. 조건에 맞는 항목만 골라내기 (품절 상품 코드 모으기) ---
 sold_out = [code for code, info in inventory.items() if info["stock"] == 0]
-print("품절 상품:", sold_out)                 # 위에서 입고했으니 이제 없음 → []
+print("품절 상품:", sold_out)                 # 위에서 입고 처리했으므로 이제 없음 → []
 
 
 print()

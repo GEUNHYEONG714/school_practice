@@ -1,7 +1,7 @@
-# hash() — dict와 set이 빠른 진짜 이유
+# hash() — dict와 set이 빠른 이유
 #
-# hash(x)는 값을 정수로 바꿔 주는 함수다.
-# dict와 set은 이 정수를 이용해 데이터를 저장하고 찾을 위치를 빠르게 계산한다.
+# hash(x)는 어떤 값을 정수로 바꿔 주는 함수다.
+# dict와 set은 이 정수를 이용해 데이터를 저장할 위치와 찾을 위치를 빠르게 계산한다.
 
 import os
 import sys
@@ -16,21 +16,21 @@ if os.environ.get("PYTHONHASHSEED") != "42":
 # 같은 값은 같은 hash 값을 가진다.
 print(hash("김민수") == hash("김민수"))   # True
 
-# 다른 값은 보통 다른 hash 값을 가진다.
+# 서로 다른 값은 보통 서로 다른 hash 값을 가진다.
 print(hash("김민수"))
 print(hash("박서연"))
 
-# 숫자, 문자열, 튜플처럼 바뀌지 않는 값은 hash할 수 있다.
+# 숫자, 문자열, 튜플처럼 내용이 바뀌지 않는 값은 hash할 수 있다.
 print(hash(42))
 print(hash((1, 2, 3)))
 
-# list/dict/set은 내용이 바뀔 수 있어서 hash할 수 없다.
+# list/dict/set은 내용이 바뀔 수 있으므로 hash할 수 없다.
 # hash([1, 2])   # TypeError: unhashable type: 'list'
 
 
 print()
 # --- 2. 사물함 비유: hash로 저장 위치를 정한다 ---
-# 사물함이 여러 칸 있다고 가정한다.
+# 여러 칸짜리 사물함이 있다고 생각해 보자.
 # hash(이름) % 100 → 들어갈 칸 번호
 
 BUCKETS = 10000
@@ -53,4 +53,4 @@ print(f"결과: {lockers[pos]}")
 
 # list라면 처음부터 끝까지 하나씩 확인해야 한다.
 # set/dict는 hash 덕분에 데이터가 아무리 많아져도
-# 어디를 확인하면 되는지 빠르게 계산할 수 있다. 그래서 검색이 빠르다.
+# 어디를 확인하면 되는지 빠르게 계산할 수 있어 검색이 빠르다.

@@ -1,7 +1,7 @@
 """
 글로벌시스템융합과 프로그래밍(1) 실습 문제
 
-실습: OPEN API로 받은 주간 날씨(JSON) 파싱하기
+실습 3: Open API로 받은 주간 날씨(JSON) 파싱하기
 
 Open-Meteo(회원가입·API키 불필요)에서 한 도시의 '7일 예보'를 받아
 가장 더운 날을 찾아 출력합니다.
@@ -14,14 +14,14 @@ Open-Meteo(회원가입·API키 불필요)에서 한 도시의 '7일 예보'를 
         "temperature_2m_min":  [18.1, 19.0, ...],                   # 최저기온들
       }
     }
-즉 time[0]·max[0]·min[0] 이 같은 날의 정보입니다. (인덱스가 짝)
+즉 time[0]·max[0]·min[0]이 같은 날의 정보입니다. (인덱스가 서로 짝입니다)
 
 [조건]
-1) fetch() 로 받은 data(dict)에서 daily 안의 세 list를 꺼낸다.
+1) fetch()로 받은 data(dict)에서 daily 안의 세 list를 꺼낸다.
 2) zip()으로 세 list를 묶어, 하루치를 dict 하나로 만든 list를 구성한다.
        days = [{"date": ..., "max": ..., "min": ...}, ...]
 3) 각 날의 기온 범위(max - min)와 함께 7일치를 보기 좋게 출력한다.
-4) max() 와 key=  를 이용해 '최고기온이 가장 높은 날'을 찾아 출력한다.
+4) max()와 key= 를 이용해 '최고기온이 가장 높은 날'을 찾아 출력한다.
 
 힌트:
 - 세 list 묶기:   for d, hi, lo in zip(dates, highs, lows):
@@ -34,7 +34,7 @@ import urllib.parse
 
 
 def fetch(city_lat, city_lng):
-    """좌표로 7일 예보를 받아 dict로 돌려준다. (이 함수는 그대로 사용)"""
+    """좌표로 7일 예보를 받아 dict로 돌려준다. 이 함수는 그대로 사용한다."""
     params = {
         "latitude": city_lat,
         "longitude": city_lng,
@@ -53,7 +53,7 @@ data = fetch(LAT, LNG)
 
 # --- 아래에 코드를 작성하세요 ---
 # 1) daily 안의 세 list 꺼내기
-# 2) zip으로 묶어 days(= dict들의 list) 만들기
+# 2) zip으로 묶어 days(dict들의 list) 만들기
 # 3) 7일치 출력
 # 4) 가장 더운 날 출력
 
