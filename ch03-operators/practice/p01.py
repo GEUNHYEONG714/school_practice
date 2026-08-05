@@ -8,7 +8,13 @@ a = int(input("첫 번째 수: "))
 b = int(input("두 번째 수: "))
 
 # 아래에 산술 연산 결과를 출력하세요
-
+print("더하기:", a + b)
+print("빼기:", a - b)
+print("곱하기:", a * b)
+print("나누기:", a / b)
+print("몫:", a // b)
+print("나머지:", a % b)
+print("거듭제곱:", a ** b)
 
 """
 [실행 결과 예시] (입력: 10, 3)

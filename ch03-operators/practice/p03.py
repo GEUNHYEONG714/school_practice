@@ -9,7 +9,13 @@ name = input("이름: ")
 message = input("메시지: ")
 
 # 아래에 코드를 작성하세요
-
+# 구분선 출력
+print("*" * 20)
+# 출력
+print(f"{name} 님의 한마디")
+print(f"{message}")
+# 구분선 출력
+print("*" * 20)
 
 """
 [실행 결과 예시] (입력: 홍길동, 파이썬 화이팅)
