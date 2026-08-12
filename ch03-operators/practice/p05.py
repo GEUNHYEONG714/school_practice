@@ -14,6 +14,15 @@ weight = int(input("몸무게(kg)를 입력하세요: "))
 
 # 아래에 BMI를 계산하여 출력하세요
 
+# 키 출력
+print(f"키: {height}cm")
+
+# 몸무게 출력
+print(f"몸무게: {weight}kg")
+
+# bmi 계산(몸무게(kg) / 키(m) ** 2) 후 출력
+bmi = weight / ((height / 100) ** 2)
+print(f"BMI: {bmi}")
 
 """
 [실행 결과 예시] (입력: 175, 70)

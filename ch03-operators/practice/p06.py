@@ -11,6 +11,14 @@ seconds = int(input("초를 입력하세요: "))
 
 # 아래에 시, 분, 초로 변환하여 출력하세요
 
+# 초 출력
+print(str(seconds) + "초")
+
+# 시간, 분, 초 계산 후 출력
+time = seconds // 3600
+minute = seconds % 3600 // 60
+second = seconds % 60
+print(f"= {time}시간 {minute}분 {second}초")
 
 """
 [실행 결과 예시] (입력: 3725)
