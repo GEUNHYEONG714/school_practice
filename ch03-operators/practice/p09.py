@@ -15,6 +15,16 @@ distance = int(input("이동 거리(m)를 입력하세요: "))
 
 # 아래에 택시 요금을 계산하여 출력하세요
 
+# 1600m 이하이면 기본요금만
+if distance <= 1600:
+      taxi = 4800
+# 추가 요금
+else:
+      over = (distance - 1600) // 131 * 100
+
+# 출력
+print(f"이동 거리: {distance}m")
+print(f"택시 요금: {over + 4800}원")
 
 """
 [실행 결과 예시] (입력: 3500)
