@@ -11,8 +11,11 @@ score = int(input("점수 입력: "))
 attendance = int(input("출석률 입력: "))
 
 # 아래에 코드를 작성하세요
-
-
+if score >= 80 and attendance > 90:
+    print("수료 가능")
+else:
+    print("수료 불가")
+    
 """
 [실행 결과 예시] (입력: 85, 95)
 수료 가능
