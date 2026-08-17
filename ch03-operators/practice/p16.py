@@ -9,7 +9,10 @@
 size = int(input("파일 크기(바이트) 입력: "))
 
 # 아래에 삼항 연산자로 코드를 작성하세요
-
+# 삼항연산자 사용
+label = f"{size / 1024:.1f}KB" if size >= 1024 else f"{size}B"
+# 츌력
+print(f"파일 크기: {label}")
 
 """
 [실행 결과 예시] (입력: 2048)
