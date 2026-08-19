@@ -18,6 +18,11 @@ age = int(input("나이를 입력하세요: "))
 guardian = input("보호자 동반 여부 (y/n): ")
 
 # 아래에 입장 가능 여부를 판별하여 출력하세요
+# 20세 이상, 보호자 동반인 경우
+if age >= 20 or guardian == "y":
+    print("입장 가능")
+else:
+    print("입장 불가")
 
 
 """

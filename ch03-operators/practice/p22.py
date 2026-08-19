@@ -19,8 +19,11 @@ age = int(input("나이를 입력하세요: "))
 is_vip = input("VIP 여부 (y/n): ")
 
 # 아래에 이벤트 참여 가능 여부를 판별하여 출력하세요
-
-
+if is_member == "y" and (age >= 20 or is_vip == "y"):
+    print("이벤트 참여 가능")
+else:
+    print("이벤트 참여 불가")
+    
 """
 [실행 결과 예시] (입력: y, 25, n)
 이벤트 참여 가능
