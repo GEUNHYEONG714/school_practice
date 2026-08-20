@@ -14,8 +14,9 @@
 temperature = 35
 
 # 아래에 코드를 작성하세요
-
-
+if temperature > 30:
+  print("폭염주의보")
+  print("외출을 자제하세요")
 """
 [실행 결과]
 폭염주의보

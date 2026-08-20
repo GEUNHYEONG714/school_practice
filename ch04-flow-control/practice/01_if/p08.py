@@ -24,6 +24,17 @@ add_bacon = input("베이컨을 추가할까요? (예/아니오): ")
 add_shrimp = input("새우를 추가할까요? (예/아니오): ")
 
 # 아래에 코드를 작성하세요
+pasta = "파스타"
+
+if add_cheese == "예":
+    pasta += " + 치즈"
+if add_bacon == "예":
+    pasta += " + 베이컨"
+if add_shrimp == "예":
+    pasta += " + 새우"
+
+# 최종 결과 출력
+print("나의 파스타: " + pasta)
 
 
 """

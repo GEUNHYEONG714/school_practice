@@ -13,7 +13,8 @@
 is_raining = True
 
 # 아래에 코드를 작성하세요
-
+if is_raining:
+      print("우산을 챙기세요")
 
 """
 [실행 결과]

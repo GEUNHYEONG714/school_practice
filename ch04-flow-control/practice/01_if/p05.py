@@ -13,7 +13,8 @@ price = 4500
 balance = 3000
 
 # 아래에 코드를 작성하세요
-
+if balance < price:
+    print("잔액이 부족합니다")
 
 """
 [실행 결과]
