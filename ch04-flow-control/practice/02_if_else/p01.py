@@ -10,6 +10,10 @@
 num = int(input("숫자를 입력하세요: "))
 
 # 아래에 홀짝을 판별하여 출력하세요
+if num % 2 == 0:
+    print(str(num) + "은(는) 짝수입니다")
+else:
+    print(str(num) + "은(는) 홀수입니다")
 
 
 """
