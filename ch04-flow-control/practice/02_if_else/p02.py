@@ -13,7 +13,17 @@ computer = "바위"
 user = input("가위, 바위, 보 중 하나를 입력하세요: ")
 
 # 아래에 승패를 판정하여 출력하세요
+print("컴퓨터:", computer)
+print("나:", user)
 
+if user == computer:
+    print("결과: 비겼습니다")
+elif user == "가위":
+    print("결과: 졌습니다")
+elif user == "보":
+    print("결과: 이겼습니다")
+else:
+    print("결과: 잘못된 입력입니다")
 
 """
 [실행 결과 예시] (입력: 가위)
