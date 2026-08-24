@@ -14,8 +14,11 @@ password = "python123"
 user_input = input("비밀번호를 입력하세요: ")
 
 # 아래에 비밀번호를 확인하여 결과를 출력하세요
-
-
+if password == user_input:
+    print("로그인 성공")
+else:
+    print("비밀번호 오류")
+    print("다시 시도하세요")
 """
 [실행 결과 예시] (입력: python123)
 로그인 성공
