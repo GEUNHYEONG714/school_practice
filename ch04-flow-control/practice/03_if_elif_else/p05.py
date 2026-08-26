@@ -20,7 +20,22 @@ height = float(input("키를 입력하세요 (cm): "))
 weight = float(input("몸무게를 입력하세요 (kg): "))
 
 # 아래에 BMI를 계산하고 판정 결과를 출력하세요
+height_m = height / 100
+bmi = weight / (height_m ** 2)
 
+# BMI 구간별 대입
+if bmi < 18.5:
+    result = "저체중"
+elif bmi < 23:
+    result = "정상"
+elif bmi < 25:
+    result = "과체중"
+else:
+    result = "비만"
+
+print(f"키: {height}cm, 몸무게: {weight}kg")
+print(f"BMI: {bmi:.2f}")
+print(f"판정: {result}")
 
 """
 [실행 결과 예시] (입력: 170, 65)

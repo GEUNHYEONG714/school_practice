@@ -16,7 +16,16 @@ if/elif/else를 사용합니다.
 month = int(input("월을 입력하세요 (1~12): "))
 
 # 아래에 계절을 판정하여 출력하세요
+if 3 <= month <= 5:
+    season = "봄"
+elif 6 <= month <= 8:
+    season = "여름"
+elif 9 <= month <= 11:
+    season = "가을"
+else:
+    season = "겨울"
 
+print(f"{month}월은 {season}입니다.")
 
 """
 [실행 결과 예시] (입력: 7)

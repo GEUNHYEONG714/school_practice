@@ -16,7 +16,17 @@ if/elif/else를 사용합니다.
 distance = float(input("거리를 입력하세요 (km): "))
 
 # 아래에 교통수단을 추천하여 출력하세요
+if distance < 2:
+    transport = "도보"
+elif distance < 5:
+    transport = "자전거"
+elif distance < 20:
+    transport = "버스"
+else:
+    transport = "지하철"
 
+print(f"거리: {distance}km")
+print("추천 교통수단: " + transport)
 
 """
 [실행 결과 예시] (입력: 8.5)
