@@ -17,7 +17,19 @@ if/elif/else를 사용합니다.
 temp = float(input("현재 기온을 입력하세요 (°C): "))
 
 # 아래에 옷차림을 추천하여 출력하세요
+if temp < 5:
+    clothes = "패딩, 두꺼운 목도리"
+elif temp < 10:
+    clothes = "코트, 니트"
+elif temp < 20:
+    clothes = "자켓, 가디건"
+elif temp < 28:
+    clothes = "반팔, 얇은 셔츠"
+else:
+    clothes = "민소매, 반바지"
 
+print(f"현재 기온: {temp}°C")
+print(f"추천 옷차림: {clothes}")
 
 """
 [실행 결과 예시] (입력: 15)

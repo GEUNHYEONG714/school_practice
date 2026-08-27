@@ -17,9 +17,31 @@ if/elif는 필요 없을 수도 있지만, 각 동전이 0개가 아닐 때만 �
 """
 
 amount = int(input("금액을 입력하세요 (원): "))
+print(str(amount) + "원 → 동전 변환:")
 
+total = 0
 # 아래에 동전 수를 계산하여 출력하세요
-
+# 500원 나누기
+five = amount // 500
+amount = amount % 500
+total += five
+# 100원
+hund = amount // 100
+amount = amount % 100
+total += hund
+# 50원
+f_ten = amount // 50
+amount = amount % 50
+total += f_ten
+# 10원
+ten = amount // 10
+total += ten
+# 결과 출력
+print("500원: " + str(five) + "개")
+print("100원: " + str(hund) + "개")
+print("50원: " + str(f_ten) + "개")
+print("10원: " + str(ten) + "개")
+print("총 동전 수: " + str(total) + "개")
 
 """
 [실행 결과 예시] (입력: 1730)

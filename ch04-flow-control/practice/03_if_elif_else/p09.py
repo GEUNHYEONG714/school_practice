@@ -19,7 +19,22 @@ AB형: 이성적이고 독창적인 성격
 blood = input("혈액형을 입력하세요 (A/B/O/AB): ")
 
 # 아래에 성격 설명을 출력하세요
+if blood == "AB":
+    personal = "이성적이고 독창적인 성격"
+elif blood == "A":
+    personal = "꼼꼼하고 신중한 성격"
+elif blood == "B":
+    personal = "자유롭고 창의적인 성격"
+elif blood == "O":
+    personal = "사교적이고 리더십이 강한 성격"
+else:
+    personal = ""
 
+if personal != "":
+    print(f"혈액형: {blood}")
+    print(f"성격: {personal}")
+else:
+    print("잘못된 입력입니다.")
 
 """
 [실행 결과 예시] (입력: AB)
