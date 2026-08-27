@@ -20,7 +20,14 @@ user_id = input("아이디를 입력하세요: ")
 password = input("비밀번호를 입력하세요: ")
 
 # 아래에 중첩 if문을 작성하세요
+if user_id == "admin":
 
+    if password == "1234":
+        print("로그인 성공!")
+    else:
+        print("비밀번호가 틀렸습니다.")
+else:
+    print("ID가 존재하지 않습니다.")
 
 """
 [실행 결과 예시] (입력: admin, 1234)
