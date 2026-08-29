@@ -20,6 +20,27 @@ genre = input("장르를 입력하세요 (액션/로맨스): ")
 age = int(input("나이를 입력하세요: "))
 
 # 아래에 중첩 if문을 작성하세요
+genre = input("장르를 입력하세요 (액션/로맨스): ")
+age = int(input("나이를 입력하세요: "))
+
+# 장르별로 구별
+if genre == "액션":
+    # 나이에 따른 추천 영화
+    if age >= 19:
+        print("추천: 존 윅")
+    else:
+        print("추천: 스파이더맨")
+        
+elif genre == "로맨스":
+    
+    # 나이에 따른 추천 영화
+    if age >= 19:
+        print("추천: 노트북")
+    else:
+        print("추천: 너의 이름은")
+
+else:
+    print("해당 장르의 추천 영화가 없습니다.")
 
 
 """
