@@ -17,6 +17,18 @@ is_member = input("회원이신가요? (Y/N): ")
 
 # 아래에 중첩 if문을 작성하세요
 # 회원이면 VIP 여부를 추가로 입력받으세요
+# 바깥 if: 회원 여부 확인
+if is_member == "Y":
+
+    is_vip = input("VIP 회원이신가요? (Y/N): ")
+
+    if is_vip == "Y":
+        print("20% 할인 적용")
+    else:
+        print("10% 할인 적용")
+        
+else:
+    print("할인 없음")
 
 
 """
