@@ -10,7 +10,8 @@ for + range()를 사용합니다.
 dan = int(input("몇 단을 출력할까요? "))
 
 # 아래에 구구단을 출력하세요
-
+for num in range(1, 10):
+    print(f"{dan} x {num} = {dan * num}")
 
 """
 [실행 결과 예시] (입력: 3)

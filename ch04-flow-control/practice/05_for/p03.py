@@ -14,8 +14,8 @@
 n = int(input("숫자를 입력하세요: "))
 
 # 아래에 약수를 출력하세요
-
-
+total = [num for num in range(1, n+1) if n % num == 0]
+print("12의 약수: " + ' '.join(map(str, total)))
 """
 [실행 결과 예시] (입력: 12)
 12의 약수: 1 2 3 4 6 12

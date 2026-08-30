@@ -9,8 +9,8 @@
 """
 
 # 아래에 짝수 합계를 구하여 출력하세요
-
-
+total = sum(num for num in range(1, 21) if num % 2 == 0)
+print(f"1~20 짝수 합계: {total}")
 """
 [실행 결과]
 1~20 짝수 합계: 110
