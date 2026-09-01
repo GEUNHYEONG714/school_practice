@@ -13,6 +13,11 @@ print()의 end="" 옵션을 사용합니다.
 n = int(input("별의 개수를 입력하세요: "))
 
 # 아래에 별을 한 줄로 출력하세요
+for _ in range(n):
+    print("*", end="")
+
+# 줄바꿈
+print()
 
 
 """

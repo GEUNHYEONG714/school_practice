@@ -12,6 +12,9 @@ range()의 세 번째 인자(step)를 사용합니다.
 n = int(input("시작 숫자를 입력하세요: "))
 
 # 아래에 N부터 1까지 거꾸로 출력하세요
+# 반대로 대입
+for num in range(n, 0, -1):
+    print(num)
 
 
 """
