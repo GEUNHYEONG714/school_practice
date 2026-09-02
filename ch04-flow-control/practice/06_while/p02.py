@@ -12,6 +12,11 @@ n = int(input("숫자를 입력하세요: "))
 
 # 아래에 1부터 n까지의 합을 구하세요
 total = 0
+i = 1
+# 이하가 되면 탈출
+while i <= n:
+    total += i 
+    i += 1      
 
 
 print(f"1부터 {n}까지의 합: {total}")
