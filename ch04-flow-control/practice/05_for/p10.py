@@ -13,7 +13,15 @@
 count = int(input("숫자의 개수를 입력하세요: "))
 
 # 아래에 숫자를 여러 번 입력받아 누적 곱을 구하여 출력하세요
+# 변수 초기화
+result = 1
 
+# count+1번 반복
+for num in range(1, count + 1):
+    num = int(input(str(num) + "번째 숫자를 입력하세요: "))
+    result *= num
+
+print(f"누적 곱: {result}")
 
 """
 [실행 결과 예시] (개수: 3, 입력: 2, 3, 4)
