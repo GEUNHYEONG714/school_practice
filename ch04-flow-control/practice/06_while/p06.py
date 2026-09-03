@@ -12,7 +12,19 @@
 # 아래에 평균을 구하는 코드를 작성하세요
 total = 0
 count = 0
+# 입력받기
+num = int(input("숫자를 입력하세요 (0=종료): "))
 
+# 0이 아닌 동안 반복
+while num != 0:
+    total += num  # total에 누적 덧셈
+    count += 1    # count에 누적 증가
+    # 입력받기
+    num = int(input("숫자를 입력하세요 (0=종료): "))
+
+# 평균 출력
+if count > 0:
+    print(f"평균: {total / count}")
 
 """
 [실행 결과 예시]

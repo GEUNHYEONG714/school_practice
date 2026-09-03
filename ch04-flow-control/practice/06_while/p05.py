@@ -13,10 +13,14 @@
 num = int(input("양의 정수를 입력하세요: "))
 
 # 아래에 숫자를 뒤집는 코드를 작성하세요
-reverse = 0
+reverse_num = 0
 
+while num > 0:
+    last_num = num % 10     # 마지막 자리 숫자 꺼내기
+    reverse_num = reverse_num * 10 + last_num  # 뒤집은 숫자에 추가
+    num //= 10  # 마지막 자리 제거
 
-print(f"뒤집은 숫자: {reverse}")
+print(f"뒤집은 숫자: {reverse_num}")
 
 """
 [실행 결과 예시] (입력: 1234)
