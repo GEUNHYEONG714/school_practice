@@ -12,7 +12,15 @@
 goal = int(input("목표 금액을 입력하세요: "))
 
 # 아래에 동전을 모으는 코드를 작성하세요
-saved = 0
+money = 0
+while money < goal:
+    print(f"현재: {money}원 / 목표: {goal}원")
+    coin = int(input("동전 투입: "))
+    money += coin  # money에 누적 덧셈
+
+# 목표 달성 출력
+print(f"현재: {money}원 / 목표: {goal}원")
+print(f"목표 달성! 총 {money}원을 모았습니다.")
 
 
 """
