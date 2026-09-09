@@ -17,6 +17,18 @@ total = 0
 
 # 아래에 음수 입력시 종료하는 프로그램을 작성하세요
 
+while True:
+    num = int(input("숫자를 입력하세요: "))
+
+    # 음수가 입력되면 반복 종료
+    if num < 0:
+        break
+
+    # 누적
+    total += num
+
+# 반복이 끝난 뒤 합계 출력
+print(f"합계: {total}")
 
 """
 [실행 결과 예시]

@@ -15,7 +15,15 @@ while + break를 사용합니다.
 answer = 42
 
 # 아래에 숫자 맞추기 게임을 작성하세요
-
+while True:
+    num = int(input("숫자를 입력하세요: "))
+    if num < answer:
+        print("더 큰 수를 입력하세요")
+    elif num > answer:
+        print("더 작은 수를 입력하세요")
+    else:
+        print("정답입니다!")
+        break
 
 """
 [실행 결과 예시]

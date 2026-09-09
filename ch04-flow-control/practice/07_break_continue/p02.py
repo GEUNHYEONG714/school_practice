@@ -18,6 +18,20 @@
 password = "python"
 
 # 아래에 비밀번호 확인 프로그램을 작성하세요
+chance = 3
+while chance > 0:
+    user_input = input("비밀번호를 입력하세요: ")
+
+    if user_input == password:
+        print("로그인 성공!")
+        break  # 정답인 경우 종료
+    else:
+        # 틀린 경우
+        chance -= 1
+        if chance > 0:
+            print(f"틀렸습니다. 남은 기회: {chance}번")
+        else:
+            print("계정이 잠겼습니다")
 
 
 """

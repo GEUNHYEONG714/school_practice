@@ -13,6 +13,11 @@ continue를 사용합니다.
 """
 
 # 아래에 3의 배수를 건너뛰고 출력하는 코드를 작성하세요
+for num in range(1, 21):
+    # 3의 배수인 경우 건너뛰기
+    if num % 3 == 0:
+        continue 
+    print(num)
 
 
 """
