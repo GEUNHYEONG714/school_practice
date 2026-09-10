@@ -16,7 +16,20 @@
 total = 0
 
 # 아래에 짝수만 누적하는 코드를 작성하세요
+# 5번 반복
+for i in range(5):
+    num = int(input("숫자를 입력하세요: "))
 
+    # 홀수이면 건너뛴다
+    if num % 2 != 0:
+        print("홀수는 건너뜁니다")
+        continue
+
+    # 짝수 누적
+    total += num
+
+# 반복이 끝난 뒤 짝수 합계 출력
+print("짝수 합계:", total)
 
 """
 [실행 결과 예시]

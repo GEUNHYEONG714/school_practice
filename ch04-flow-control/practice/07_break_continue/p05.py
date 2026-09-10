@@ -20,6 +20,16 @@ text = "hello python"
 target = "p"
 
 # 아래에 특정 문자를 찾는 코드를 작성하세요
+# 문자열 길이만큼 반복
+for index in range(len(text)):
+    if text[index] == target:
+        print(f"'{target}'을(를) {index}번째 위치에서 찾았습니다!")
+
+        break  
+
+# 끝까지 찾지 못한 경우
+else:
+    print("찾지 못했습니다")
 
 
 """

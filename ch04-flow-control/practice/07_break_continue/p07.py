@@ -16,7 +16,26 @@
 """
 
 # 아래에 메뉴 시스템을 작성하세요
+while True:
+    # 출력
+    print("===== 메뉴 =====")
+    print("1. 인사")
+    print("2. 날씨")
+    print("q. 종료")
+    print("================")
 
+    user_input = input("선택: ")
+
+    # 사용자 입력에 따라 분기
+    if user_input == "1":
+        print("안녕하세요!")
+    elif user_input  == "2":
+        print("오늘 날씨가 좋습니다!")
+    elif user_input == "q":
+        print("프로그램을 종료합니다")
+        break
+    else:
+        print("잘못된 입력입니다")
 
 """
 [실행 결과 예시]
