@@ -15,6 +15,25 @@
 n = int(input("크기를 입력하세요: "))
 
 # 아래에 다이아몬드를 출력하세요
+# 위 삼각 반복
+for i in range(1, n + 1):
+    for j in range(n - i):
+        print(" ", end="")
+
+    for j in range(2 * i - 1):
+        print("*", end="")
+
+    print()
+
+# 아래쪽 역삼각형 (n-1줄 ~ 1줄)
+for i in range(n - 1, 0, -1):
+    for j in range(n - i):
+        print(" ", end="")
+
+    for j in range(2 * i - 1):
+        print("*", end="")
+
+    print()
 
 
 """

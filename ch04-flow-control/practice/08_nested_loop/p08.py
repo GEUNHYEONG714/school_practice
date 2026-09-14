@@ -13,6 +13,13 @@
 n = int(input("줄 수를 입력하세요: "))
 
 # 아래에 역 숫자 피라미드를 출력하세요
+# 1씩 감소
+for i in range(n, 0, -1):
+    # 1씩 감소
+    for j in range(i, 0, -1):
+      print(j, end="")
+    # 줄바꿈
+    print()
 
 
 """

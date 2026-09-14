@@ -12,7 +12,25 @@
 """
 
 # 아래에 곱셈표를 출력하세요
+# 맨 윗줄 출력
+print("X", end="\t")
 
+for i in range(1, 6):
+    print(i, end="\t")
+
+print()
+
+print("-" * 30)
+
+for i in range(1, 6):
+    # i 출력
+    print(i, end="\t")
+    
+    # 곱셈 결과 출력
+    for j in range(1, 6):
+        print(i * j, end="\t")
+
+    print()
 
 """
 [실행 결과 예시]
