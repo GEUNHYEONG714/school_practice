@@ -16,6 +16,30 @@ hour = int(input("현재 시간을 입력하세요 (0~23): "))
 
 # 아래에 택시비를 계산하는 코드를 작성하세요
 
+# 기본 요금
+base_fare = 4800
+print(f"기본요금: {base_fare}원")
+
+# 추가 요금 계산
+if distance > 2:
+    extra_fare = int((distance - 2) * 1000)
+else:
+    extra_fare = 0
+print(f"추가요금: {extra_fare}원")
+
+# 총 요금 계산
+total = base_fare + extra_fare
+
+# 야간 할증 확인
+if hour >= 22 or hour < 6:
+    night_fare = int(total * 0.2)
+    print(f"야간 할증 (20%): {night_fare}원")
+    total = total + night_fare
+
+# 최종 요금 출력
+print(f"총 택시비: {total}원")
+
+
 
 """
 [실행 결과 예시]

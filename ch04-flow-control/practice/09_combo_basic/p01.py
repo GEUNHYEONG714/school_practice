@@ -16,7 +16,31 @@
 total = 0
 
 # 아래에 메뉴 주문 시스템을 작성하세요
+while True:
+    # 기본 출력
+    print("--- 메뉴 ---")
+    print("1. 아메리카노 (4000원)")
+    print("2. 카페라떼 (4500원)")
+    print("3. 녹차 (3500원)")
+    print("0. 주문 완료")
 
+    choice = int(input("메뉴를 선택하세요: "))
+
+    # 입력값에 따른 금액 추가
+    if choice == 1:
+        total += 4000
+        print("아메리카노를 추가했습니다.")
+    elif choice == 2:
+        total += 4500
+        print("카페라떼를 추가했습니다.")
+    elif choice == 3:
+        total += 3500
+        print("녹차를 추가했습니다.")
+    elif choice == 0:
+        break
+
+# 반복이 끝난 후 총 금액 출력
+print(f"총 주문 금액: {total}원")
 
 """
 [실행 결과 예시]

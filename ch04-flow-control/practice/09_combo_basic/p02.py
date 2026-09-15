@@ -15,6 +15,23 @@ total = 0
 best = 0
 
 # 아래에 5명의 점수를 입력받아 평균과 최고점을 출력하세요
+# 5번 반복
+for i in range(1, 6):
+    score = int(input(f"{i}번 학생 점수: "))
+
+    # 점수 누적 덧셈
+    total += score
+
+    # 큰 경우 갱신
+    if score > best:
+        best = score
+
+# 평균 구하기
+average = total / 5
+
+# 출력
+print(f"평균: {average}")
+print(f"최고점: {best}")
 
 
 """
