@@ -26,6 +26,33 @@ age = int(input("나이를 입력하세요: "))
 
 # 아래에 BMI를 계산하고 판정하는 코드를 작성하세요
 
+# BMI 계산
+height_m = height / 100
+bmi = weight / (height_m ** 2)
+
+print(f"BMI: {round(bmi, 2)}")
+
+# 나이에 따른 BMI 기준
+if age >= 20:
+    # 성인 기준
+    if bmi < 18.5:
+        print(f"판정: 저체중")
+    elif bmi < 23:
+        print(f"판정: 정상")
+    elif bmi < 25:
+        print(f"판정: 과체중")
+    else:
+        print(f"판정: 비만")
+else:
+    # 청소년 기준
+    if bmi < 17:
+        print(f"판정: 저체중 (청소년 기준)")
+    elif bmi < 23:
+        print(f"판정: 정상 (청소년 기준)")
+    else:
+        print(f"판정: 과체중 주의 (청소년 기준)")
+
+
 
 """
 [실행 결과 예시]

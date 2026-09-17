@@ -18,6 +18,27 @@ usage = int(input("전기 사용량을 입력하세요 (kWh): "))
 
 # 아래에 전기 요금을 계산하는 코드를 작성하세요
 
+# 사용량에 따른 전기 요금 계산
+if usage <= 100:
+    # 100kWh 이하
+    charge = usage * 60
+elif usage <= 200:
+    # 101~200kWh
+    charge = 100 * 60 + (usage - 100) * 120
+else:
+    # 200kWh 초과
+    charge = 100 * 60 + 100 * 120 + (usage - 200) * 190
+
+print(f"전기 요금: {charge}원")
+
+# 부가세 계산
+tax = int(charge * 0.1)
+print(f"부가세 (10%): {tax}원")
+
+# 총 납부 금액 계산
+total = charge + tax
+print(f"총 납부 금액: {total}원")
+
 
 """
 [실행 결과 예시]

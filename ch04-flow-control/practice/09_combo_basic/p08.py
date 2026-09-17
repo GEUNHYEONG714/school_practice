@@ -21,6 +21,31 @@ group_count = int(input("인원 수를 입력하세요: "))
 
 # 아래에 입장료를 계산하는 코드를 작성하세요
 
+# 나이에 따른 입장료 계산
+if age <= 3:
+    price = 0
+elif age <= 12:
+    price = 15000
+elif age <= 18:
+    price = 20000
+elif age <= 64:
+    price = 30000
+else:
+    price = 10000
+
+print(f"기본 입장료: {price}원")
+
+# 단체 할인 판단
+if group_count >= 10:
+    print(f"단체 할인 적용 (20%)!")
+    price = int(price * 0.8)
+    print(f"1인 할인가: {price}원")
+
+# 총 입장료 계산
+total = price * group_count
+print(f"총 입장료: {total}원")
+
+
 
 """
 [실행 결과 예시]

@@ -20,8 +20,31 @@
 score = int(input("점수를 입력하세요 (0~100): "))
 attendance = int(input("출석률을 입력하세요 (0~100): "))
 
-# 아래에 등급 판별 + 수료 여부를 출력하는 코드를 작성하세요
+# 아래에 등급 판별 + 수료 여부를 출력하는 코드를 작성하세요```python
+# 성적에 따른 등급 계산
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
+else:
+    grade = "F"
 
+print("등급:", grade)
+
+# 수료 여부 판단
+if grade == "F":
+    # 성적이 60점 미만인 경우
+    print("미수료 - 성적 미달 (60점 이상 필요)")
+elif attendance < 80:
+    # 출석률이 80% 미만인 경우
+    print("미수료 - 출석률 부족 (80% 이상 필요)")
+else:
+    # 성적과 출석률을 모두 만족한 경우
+    print("수료를 축하합니다!")
 
 """
 [실행 결과 예시]

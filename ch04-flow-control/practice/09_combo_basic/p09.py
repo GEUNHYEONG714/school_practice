@@ -17,6 +17,33 @@ num2 = float(input("두 번째 수를 입력하세요: "))
 
 # 아래에 계산기를 구현하세요
 
+# 연산자에 따른 계산
+if op == "+":
+    result = num1 + num2
+    print(f"{num1} + {num2} = {result}")
+    
+elif op == "-":
+    result = num1 - num2
+    print(f"{num1} - {num2} = {result}")
+    
+elif op == "*":
+    result = num1 * num2
+    print(f"{num1} * {num2} = {result}")
+    
+elif op == "/":
+    
+    # 0으로 나누는 경우
+    if num2 == 0:
+        print(f"0으로 나눌 수 없습니다.")
+    else:
+        result = num1 / num2
+        
+        print(f"{num1} / {num2} = {result}")
+else:
+    # 잘못된 연산자인 경우
+    print(f"지원하지 않는 연산자입니다.")
+
+
 
 """
 [실행 결과 예시]
