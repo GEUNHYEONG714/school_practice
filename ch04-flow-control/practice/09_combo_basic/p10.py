@@ -24,7 +24,36 @@ user = int(input("선택하세요 (1/2/3): "))
 computer = 2
 
 # 아래에 가위바위보 판정 코드를 작성하세요
+if user < 1 or user > 3:
+    print("잘못된 입력입니다. 1, 2, 3 중에서 선택하세요.")
+else:
+    # 숫자를 이름으로 변환하여 출력
+    if user == 1:
+        user_name = "가위"
+    elif user == 2:
+        user_name = "바위"
+    else:
+        user_name = "보"
 
+    if computer == 1:
+        com_name = "가위"
+    elif computer == 2:
+        com_name = "바위"
+    else:
+        com_name = "보"
+
+    print("당신:", user_name, "/ 컴퓨터:", com_name)
+
+    # 출력
+    if user == computer:
+        # 같은 경우 무승부
+        print("무승부입니다! 😐")
+
+    elif (user == 1 and computer == 3) or (user == 2 and computer == 1) or (user == 3 and computer == 2):
+        # 이긴 경우
+        print("축하합니다! 당신이 이겼습니다! 🎉")
+    else:
+        print("아쉽게도 졌습니다. 😢")
 
 """
 [실행 결과 예시]

@@ -8,7 +8,16 @@
 """
 
 # 아래에 코드를 작성하세요
+n = int(input("N을 입력하세요: "))
 
+# 변수 초기화
+total = 0
+
+# 1부터 n+1 까지 반복
+for i in range(1, n + 1):
+    total += i
+
+print(f"1부터 {n}까지의 합: {total}")
 
 """
 [실행 결과 예시]

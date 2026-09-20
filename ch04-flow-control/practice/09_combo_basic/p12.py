@@ -32,6 +32,58 @@ accident = input("사고 유무를 입력하세요 (Y/N): ")
 
 # 아래에 중고차 가격을 산정하는 코드를 작성하세요
 
+if year <= 3:
+    # 1~3년 10%
+    year_discount = year * 10
+
+elif year <= 7:
+    # 4~7년 처음 3년 10%, 나머지는 7%
+    year_discount = 3 * 10 + (year - 3) * 7
+
+else:
+    # 8년 이상 처음 3년 10%, 다음 4년 7%, 나머지 5%
+    year_discount = 3 * 10 + 4 * 7 + (year - 7) * 5
+
+
+# 2) 주행거리 감가율
+if km <= 5:
+    km_discount = 0
+
+elif km <= 10:
+    km_discount = 5
+
+else:
+    km_discount = 10
+
+
+# 3) 사고 감가율
+if accident == "Y" or accident == "y":
+    accident_discount = 15
+
+else:
+    accident_discount = 0
+
+
+# 총 감가율
+total_discount = year_discount + km_discount + accident_discount
+
+
+#출력
+print("--- 감가 내역 ---")
+print(f"연식 감가 ({year}년): {year_discount}%")
+print(f"주행거리 감가: {km_discount}%")
+print(f"사고 감가: {accident_discount}%")
+print(f"총 감가율: {total_discount}%")
+
+
+# 최종 가격 계산 (최소 신차 가격의 10%)
+final_price = int(new_price * (1 - total_discount / 100))
+min_price = int(new_price * 0.1)
+
+if final_price < min_price:
+    final_price = min_price
+
+print(f"예상 중고차 가격: {final_price}만원")
 
 """
 [실행 결과 예시]
