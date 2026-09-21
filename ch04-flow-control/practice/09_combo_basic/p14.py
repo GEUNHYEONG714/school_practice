@@ -8,7 +8,17 @@
 """
 
 # 아래에 코드를 작성하세요
+num = int(input("N을 입력하세요: "))
 
+count = 0  # 짝수 개수를 셀 변수
+
+# 1부터 num까지 반복
+for index in range(1, num + 1):
+    # 나머지가 0인 경우 덧셈
+    if index % 2 == 0:
+        count += 1
+
+print(f"1부터 {num}까지 짝수의 개수: {count}")
 
 """
 [실행 결과 예시]

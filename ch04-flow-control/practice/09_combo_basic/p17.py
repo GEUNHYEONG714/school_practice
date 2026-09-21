@@ -11,7 +11,17 @@
 """
 
 # 아래에 코드를 작성하세요
+min = int(input("1번째 숫자: "))
 
+# 나머지 숫자를 입력받으며 비교
+for i in range(2, 6):
+    num = int(input(f"{i}번째 숫자: "))
+
+    # 현재 최소값보다 작으면 갱신
+    if num < min:
+        min = num
+
+print(f"최소값: {min}")
 
 """
 [실행 결과 예시]

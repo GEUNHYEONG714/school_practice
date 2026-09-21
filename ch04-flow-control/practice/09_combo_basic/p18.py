@@ -8,6 +8,24 @@
 """
 
 # 아래에 코드를 작성하세요
+pos = 0  # 양수 개수
+nega = 0  # 음수 개수
+zero = 0      # 0 개수
+
+# 1부터 11까지 반복
+for i in range(1, 11):
+    num = int(input(f"{i}번째 숫자: "))
+
+    if num > 0:
+        pos += 1
+    elif num < 0:
+        nega += 1
+    else:
+        zero += 1
+
+print(f"양수: {pos}개")
+print(f"음수: {nega}개")
+print(f"0: {zero}개")
 
 
 """

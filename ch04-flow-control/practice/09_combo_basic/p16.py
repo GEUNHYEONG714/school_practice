@@ -8,7 +8,20 @@
 """
 
 # 아래에 코드를 작성하세요
+num = int(input("학생 수를 입력하세요: "))
 
+total = 0
+
+# 학생 점수 입력
+for i in range(1, num + 1):
+    score = int(input(f"{i}번 학생 점수: "))
+    total += score
+
+# 평균 계산
+average = total / num
+
+# 출력
+print(f"평균 점수: {average}")
 
 """
 [실행 결과 예시]
