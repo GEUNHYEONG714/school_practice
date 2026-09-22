@@ -10,6 +10,28 @@
 
 # 아래에 코드를 작성하세요
 
+# 변수 초기화
+total = 0
+count = 0
+
+# 반복
+while True:
+    # 값 입력받기
+    num = int(input("숫자를 입력하세요: "))
+    
+    # 누적 덧셈
+    total += num
+    
+    # 반복할때마다 1씩 증가
+    count += 1
+
+    # 100 초과시 break
+    if total > 100:
+        break
+
+print("누적합이 100을 초과했습니다!")
+print("누적합:", total)
+print("입력 횟수:", count)
 
 """
 [실행 결과 예시]

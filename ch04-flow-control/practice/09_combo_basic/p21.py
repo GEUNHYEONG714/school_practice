@@ -9,7 +9,18 @@
 """
 
 # 아래에 코드를 작성하세요
+n = int(input("N을 입력하세요: "))
+m = int(input("M을 입력하세요: "))
 
+total = 0  # 배수 합계
+
+# 1부터 N까지 반복
+for i in range(1, n + 1):
+    # M의 배수인지 확인
+    if i % m == 0:
+        total += i
+
+print(f"1부터 {n}까지 {m}의 배수의 합: {total}")
 
 """
 [실행 결과 예시]

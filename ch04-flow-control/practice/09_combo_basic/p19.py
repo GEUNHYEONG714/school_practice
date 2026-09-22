@@ -15,6 +15,28 @@
 
 # 아래에 코드를 작성하세요
 
+a_count = 0  # 90점 이상
+b_count = 0  # 80점 이상
+c_count = 0  # 70점 이상
+d_count = 0  # 70점 미만
+
+# 10번 반복
+for i in range(10):
+    score = int(input(f"{i}번 학생 점수: "))
+
+    if score >= 90:
+        a_count += 1
+    elif score >= 80:
+        b_count += 1
+    elif score >= 70:
+        c_count += 1
+    else:
+        d_count += 1
+
+print(f"90점 이상: {a_count}명")
+print(f"80점 이상: {b_count}명")
+print(f"70점 이상: {c_count}명")
+print(f"70점 미만: {d_count}명")
 
 """
 [실행 결과 예시]
