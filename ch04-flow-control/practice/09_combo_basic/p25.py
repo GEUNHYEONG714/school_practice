@@ -16,6 +16,24 @@ n = int(input("학생 수를 입력하세요: "))
 
 # 아래에 각 학생의 등급을 별로 표시하는 코드를 작성하세요
 
+# n만큼 반복
+for index in range(1, n + 1):
+    score = int(input(f"{index}번 학생 점수: "))
+
+    # 점수 구간에 따라 별 개수 결정
+    if score >= 90:
+        stars = "★★★★★"
+    elif score >= 80:
+        stars = "★★★★"
+    elif score >= 70:
+        stars = "★★★"
+    elif score >= 60:
+        stars = "★★"
+    else:
+        stars = "★"
+
+    print(f"{index}번 학생: {stars}")
+
 
 """
 [실행 결과 예시]

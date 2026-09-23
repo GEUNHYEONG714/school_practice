@@ -12,9 +12,15 @@ count = 0
 
 # 아래에 합격자 수를 세는 코드를 작성하세요
 
+# n만큼 반복
+for i in range(1, n + 1):
+    score = int(input(f"{i}번 학생 점수: "))
+
+    # 60점 이상이면 합격자 수 증가
+    if score >= 60:
+        count += 1
 
 print("합격자 수:", count)
-
 
 """
 [실행 결과 예시]
