@@ -11,9 +11,14 @@ num = int(input("숫자를 입력하세요: "))
 count = 0
 
 # 아래에 약수를 출력하고 개수를 세는 코드를 작성하세요
+# 1부터 num + 1 까지 반복
+for index in range(1, num + 1):
+    # 약수인 경우
+    if num % index == 0:
+        print(index)
+        count += 1
 
-
-print("약수의 개수:", count)
+print(f"약수의 개수: {count}")
 
 
 """

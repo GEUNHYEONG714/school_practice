@@ -22,6 +22,41 @@ money = int(input("투입 금액을 입력하세요: "))
 
 # 아래에 음료 자판기 코드를 작성하세요
 
+# 500원 이하가 되면 종료
+while money >= 500:
+    # 반복 출력
+    print(f"잔액: {money}원")
+    print("1. 물 (500원)")
+    print("2. 주스 (1000원)")
+    print("3. 커피 (1500원)")
+    # 입력받기
+    choice = int(input("음료를 선택하세요: "))
+
+    # 입력받은 값에 따른 가격
+    if choice == 1:
+        price = 500
+        message = "물을 선택했습니다."
+    elif choice == 2:
+        price = 1000
+        message = "주스를 선택했습니다."
+    elif choice == 3:
+        price = 1500
+        message = "커피를 선택했습니다."
+    else:
+        print("잘못된 선택입니다.")
+        continue  # 다음 반복
+
+    # 잔액이 부족한 경우
+    if money >= price:
+        # 가격 차감
+        money -= price
+        print(message)
+
+    else:
+        print("잔액이 부족합니다.")
+        break
+
+print(f"남은 금액: {money}원")
 
 """
 [실행 결과 예시]

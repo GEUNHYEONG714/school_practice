@@ -13,7 +13,19 @@ num = int(input("숫자를 입력하세요: "))
 total = 0
 
 # 아래에 완전수를 판별하는 코드를 작성하세요
+# 값 반복하며 확인
+for i in range(1, num):
+    if num % i == 0:
+        # 누적 덧셈
+        total += i
 
+print(f"{num}의 약수의 합: total")
+
+# num과 같으면 완전수
+if total == num:
+    print(f"{num}은(는) 완전수입니다!")
+else:
+    print(f"{num}은(는) 완전수가 아닙니다.")
 
 """
 [실행 결과 예시]
