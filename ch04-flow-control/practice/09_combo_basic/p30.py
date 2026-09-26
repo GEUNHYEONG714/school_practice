@@ -12,6 +12,16 @@ neg_sum = 0   # 음수의 합
 zero_count = 0  # 0의 개수
 
 # 아래에 10개 숫자를 분류하는 코드를 작성하세요
+for index in range(1, 11):
+    num = int(input(str(index) + "번째 숫자: "))
+
+    # 0보다 큰 경우
+    if num > 0:
+        pos_sum += num
+    elif num < 0:
+        neg_sum += num
+    else:
+        zero_count += 1
 
 
 print("양수의 합:", pos_sum)
