@@ -12,7 +12,8 @@ text = input("문자열을 입력하세요: ")
 count = 0
 
 # 아래에 for문으로 문자열 길이를 세는 코드를 작성하세요
-
+for _ in text:
+    count += 1
 
 print("문자열 길이:", count)
 

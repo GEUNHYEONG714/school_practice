@@ -8,10 +8,16 @@
 힌트: lower()로 소문자로 바꾼 뒤, if문으로 모음인지 확인합니다.
 """
 
-text = input("문자열을 입력하세요: ")
+text = input("문자열을 입력하세요: ").lower()
 vowel_count = 0
 
 # 아래에 모음 개수를 세는 코드를 작성하세요
+# text 반복
+for char in text:
+
+    # 대소문자 구분 없이 비교하기 위해 소문자로 변환
+    if char in "aeiou":
+        vowel_count += 1
 
 
 print("모음 개수:", vowel_count)

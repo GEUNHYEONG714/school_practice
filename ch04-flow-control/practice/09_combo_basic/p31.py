@@ -13,7 +13,14 @@ total = 0
 even_sum = 0
 
 # 아래에 구간의 합계와 짝수합을 구하는 코드를 작성하세요
+# 시작, 끝 +1 반복
+for i in range(start, end + 1):
+    # 총합계
+    total += i
 
+    # 짝수인 경우
+    if i % 2 == 0:
+        even_sum += i
 
 print("구간 합계:", total)
 print("짝수 합계:", even_sum)

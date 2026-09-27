@@ -23,7 +23,31 @@ min_temp = 9999
 
 # 아래에 온도 변환 코드를 작성하세요
 
+# n만큼 반복
+for _ in range(n):
 
+    # 플롯형으로 받기
+    temp = float(input("온도를 입력하세요: "))
+
+    # 1, 2
+    if mode == 1:
+        # 섭씨 → 화씨
+        result = temp * 9 / 5 + 32
+        print(f"변환 결과: {result}°F")
+
+    elif mode == 2:
+        # 화씨 → 섭씨
+        result = (temp - 32) * 5 / 9
+        print(f"변환 결과: {result}°C")
+
+    # 최고 온도 갱신
+    if result > max_temp:
+        max_temp = result
+    # 최저 온도 갱신
+    if result < min_temp:
+        min_temp = result
+
+# 출력
 print("최고 변환 온도:", max_temp)
 print("최저 변환 온도:", min_temp)
 
