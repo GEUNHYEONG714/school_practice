@@ -14,7 +14,9 @@ result = ""
 
 # 아래에 문자열을 뒤집는 코드를 작성하세요
 
-
+for i in range(len(text) - 1, -1, -1):
+    result += text[i]
+    
 print("뒤집은 문자열:", result)
 
 """

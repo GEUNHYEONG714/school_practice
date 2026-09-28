@@ -12,7 +12,16 @@ text = input("문자열을 입력하세요: ")
 result = ""
 
 # 아래에 마스킹 코드를 작성하세요
-
+# 길이만큼 반복
+for index in range(len(text)):
+    # 처음, 마지막인 경우
+    if index == 0 or index == len(text) - 1:
+          # 그대로 대입
+          result += text[index]
+      
+          # 아닌 경우
+    else:
+          result += "*"
 
 print("마스킹 결과:", result)
 

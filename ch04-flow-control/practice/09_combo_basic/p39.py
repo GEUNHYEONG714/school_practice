@@ -13,7 +13,14 @@ text = input("문자열을 입력하세요: ")
 reversed_text = ""
 
 # 아래에 문자열을 뒤집고 회문인지 판별하는 코드를 작성하세요
+for index in range(len(text) - 1, -1, -1):
+    reversed_text += text[index]
 
+# 비교
+if text == reversed_text:
+    print(f"{text} 은(는) 회문입니다!")
+else:
+    print(f"{text} 은(는) 회문이 아닙니다.")
 
 """
 [실행 결과 예시 1] (입력: level)

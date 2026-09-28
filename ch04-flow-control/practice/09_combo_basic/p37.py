@@ -13,7 +13,12 @@ remove = input("제거할 문자를 입력하세요: ")
 result = ""
 
 # 아래에 특정 문자를 제거하는 코드를 작성하세요
-
+# 제거할 문자가 아닌 경우에만 결과에 추가
+for str in text:
+    
+    if str != remove:
+        result += str
+    
 
 print("결과:", result)
 
