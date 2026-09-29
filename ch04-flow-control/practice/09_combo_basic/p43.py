@@ -12,6 +12,50 @@
 
 # 아래에 자판기 시뮬레이션 코드를 작성하세요
 
+# 출력
+print("=== 자판기 ===")
+
+# 반복
+while True:
+    # 돈 입력받기
+    money = int(input("동전 투입 (0: 종료): "))
+
+    # 0인경우 break
+    if money == 0:
+        print("이용해 주셔서 감사합니다!")
+        break
+    
+    # 잔액, 가격 출력
+    print(f"현재 잔액: {money}원")
+    print("1.콜라(500원) 2.사이다(400원) 3.주스(700원)")
+
+    # 음류수 입력 받기
+    drink = int(input("음료 선택: "))
+
+    # 변수 초기화
+    drink_money = 0
+    drink_name = ""
+
+    # 입력받은 값에 따른 음료
+    if drink == 1:
+        drink_money = 500
+        drink_name = "콜라"
+    elif drink == 2:
+        drink_money = 400
+        drink_name = "사이다"
+    elif drink == 3:
+        drink_money = 700
+        drink_name = "주스"
+
+    # 돈이 더 많은 경우
+    if money >= drink_money:
+        print(drink_name + "를 구매했습니다!")
+        money = money - drink_money
+    else:
+        print("잔액이 부족합니다!")
+
+    # 잔돈 출력
+    print(f"잔돈: {money}원")
 
 """
 [실행 결과 예시]

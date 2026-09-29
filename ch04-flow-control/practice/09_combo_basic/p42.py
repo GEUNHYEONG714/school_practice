@@ -15,7 +15,20 @@ result = ""
 
 # 아래에 각 글자를 다음 알파벳으로 변환하는 코드를 작성하세요
 
+# 문자열 대입
+for str in text:
+    # 소문자인 경우
+    if "a" <= str <= "z":
+        print((ord(str) - ord("a") + 1) % 26)  
+        result += chr((ord(str) - ord("a") + 1) % 26 + ord("a"))
+    # 대문자인 경우
+    elif "A" <= str <= "Z":
+        result += chr((ord(str) - ord("A") + 1) % 26 + ord("A"))
+    # 영어가 아닌 경우
+    else:
+        result += str
 
+# 출력
 print("암호:", result)
 
 """

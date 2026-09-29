@@ -13,7 +13,11 @@ text = input("문자열을 입력하세요: ")
 n = int(input("반복 횟수를 입력하세요: "))
 
 # 아래에 각 글자를 n번씩 반복 출력하는 코드를 작성하세요
-
+# 문자열 대입
+for str in text:
+    # n만큼 반복
+    for _ in range(n):
+        print(str, end="")
 
 print()  # 마지막 줄바꿈
 

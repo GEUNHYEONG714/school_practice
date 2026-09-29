@@ -12,6 +12,17 @@
 text = input("문자열을 입력하세요: ")
 
 # 아래에 각 문자의 빈도를 출력하는 코드를 작성하세요
+# 글자 대입, 반복
+for char in text:
+    # 변수 생성
+    count = 0
+    
+    # 글자 카운트
+    for c in text:
+        if c == char:
+            count += 1
+    print(f"{char}: {count}개")
+
 
 
 """
