@@ -12,17 +12,29 @@
 
 score = 0
 
-# 문제 1
-a1 = 12
-b1 = 8
-answer1 = 20
-print("문제 1:", a1, "+", b1, "= ?")
-user1 = int(input("답: "))
+# 문제 저장
+problems = [
+    (12, 8),
+    (35, 17),
+    (99, 1),
+    (46, 27),
+    (58, 34)
+]
+# 순서대로 꺼내기
+for index, (a, b) in enumerate(problems, 1):
+    answer = a + b
 
-# 아래에 정답 확인 및 나머지 문제(2~5) 코드를 작성하세요
+    print(f"문제 {index}: {a} + {b} = ?")
+    # 답 입력받기
+    user_answer = int(input("답: "))
 
+    if user_answer == answer:
+        print("정답!")
+        score += 20
+    else:
+        print("오답! 정답은", str(answer) + "입니다")
 
-print("=== 최종 점수:", score, "/ 100 ===")
+print("점수:", score)
 
 
 """

@@ -10,14 +10,34 @@
 """
 
 balance = 0
-total_income = 0
+total_plus = 0
 total_expense = 0
 
 # 아래에 가계부 코드를 작성하세요
+# 반복
+while True:
+    
+    user_input = int(input("선택: "))
 
+    # 0입력 받으면 반복 종료
+    if user_input == 0:
+        break
+    amount = int(input("금액: "))
+    # 1을 입력받은 경우 수입
+    if user_input == 1:
+        balance += amount
+        total_plus += amount
+        print(f"[수입] +{amount}원 | 잔액: {balance}원")
 
+    # 2를 입력받은 경우 지출
+    elif user_input == 2:
+        balance -= amount
+        total_expense += amount
+        print(f"[지출] -{amount}원 | 잔액: {balance}원")
+
+# 출력
 print("=== 종합 요약 ===")
-print("총 수입:", total_income, "원")
+print("총 수입:", total_plus, "원")
 print("총 지출:", total_expense, "원")
 print("최종 잔액:", balance, "원")
 

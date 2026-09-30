@@ -13,8 +13,24 @@ present = 0
 absent = 0
 
 # 아래에 출석부 코드를 작성하세요
+# 1부터 n+1까지 반복
+for i in range(1, n + 1):
+    
+    # 학생 이름 입력받기
+    name = input(str(i) + "번 학생 이름: ")
 
+    # 출석, 결석 입력받기
+    status = int(input("출석 여부 (1:출석 / 0:결석): "))
 
+    # 1인 경우 출석
+    if status == 1:
+        print(name, "- 출석")
+        present += 1
+    else:  # 아니면 결석
+        print(name, "- 결석")
+        absent += 1
+
+# 출력
 print("--- 출석 결과 ---")
 print("출석:", present, "명")
 print("결석:", absent, "명")
