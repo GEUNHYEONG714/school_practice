@@ -18,7 +18,43 @@ exit_time = int(input("출차 시간(분): "))
 parked = exit_time - enter_time
 
 # 아래에 요금 계산 코드를 작성하세요
+print("=== 주차 요금 계산기 ===")
+enter_time = int(input("입차 시간(분): "))
+exit_time = int(input("출차 시간(분): "))
 
+# 주차 시간 계산
+parked = exit_time - enter_time
+
+# 기본 요금
+base_fee = 2000
+
+# 추가 요금 초기화
+extra_fee = 0
+
+# 주차 시간이 30분을 초과하는 경우
+if parked > 30:
+    # 30분을 초과한 시간 계산
+    extra_minutes = parked - 30
+
+    # 10분당 500원 계산
+    extra_fee = (extra_minutes // 10) * 500
+
+    # 10분이 안 되는 남은 시간도 요금 추가
+    if extra_minutes % 10 > 0:
+        extra_fee += 500
+
+    print(f"추가 시간: {extra_minutes}분")
+
+# 주차 시간 출력
+print(f"주차 시간: {parked}분")
+# 기본 요금 출력
+print(f"기본 요금: {base_fee}원")
+# 추가 요금 출력
+print(f"추가 요금: {extra_fee}원")
+
+# 총 요금 계산
+total = base_fee + extra_fee
+print(f"총 요금: {total}원")
 
 """
 [실행 결과 예시]

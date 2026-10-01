@@ -17,6 +17,58 @@ day = int(input("생일 일을 입력하세요: "))
 
 # 아래에 별자리 판별 및 운세 출력 코드를 작성하세요
 
+# 별자리 판별
+if (month == 1 and day >= 20) or (month == 2 and day <= 18):
+    zodiac = "물병자리"
+    fortune = "새로운 기회가 찾아올 거예요!"
+
+elif (month == 2 and day >= 19) or (month == 3 and day <= 20):
+    zodiac = "물고기자리"
+    fortune = "좋은 소식이 기다리고 있어요!"
+
+elif (month == 3 and day >= 21) or (month == 4 and day <= 19):
+    zodiac = "양자리"
+    fortune = "용기를 내면 좋은 결과가 있어요!"
+
+elif (month == 4 and day >= 20) or (month == 5 and day <= 20):
+    zodiac = "황소자리"
+    fortune = "꾸준히 노력하면 좋은 일이 생겨요!"
+
+elif (month == 5 and day >= 21) or (month == 6 and day <= 21):
+    zodiac = "쌍둥이자리"
+    fortune = "새로운 만남이 기다리고 있어요!"
+
+elif (month == 6 and day >= 22) or (month == 7 and day <= 22):
+    zodiac = "게자리"
+    fortune = "새로운 만남이 기다리고 있어요!"
+
+elif (month == 7 and day >= 23) or (month == 8 and day <= 22):
+    zodiac = "사자자리"
+    fortune = "자신감을 가지면 좋은 일이 생겨요!"
+
+elif (month == 8 and day >= 23) or (month == 9 and day <= 22):
+    zodiac = "처녀자리"
+    fortune = "작은 노력이 좋은 결과로 이어져요!"
+
+elif (month == 9 and day >= 23) or (month == 10 and day <= 22):
+    zodiac = "천칭자리"
+    fortune = "주변 사람들과 좋은 시간을 보내세요!"
+
+elif (month == 10 and day >= 23) or (month == 11 and day <= 21):
+    zodiac = "전갈자리"
+    fortune = "자신감을 가지면 좋은 일이 생겨요!"
+
+elif (month == 11 and day >= 22) or (month == 12 and day <= 21):
+    zodiac = "사수자리"
+    fortune = "새로운 도전을 시작해 보세요!"
+
+else:
+    zodiac = "염소자리"
+    fortune = "차분하게 행동하면 좋은 일이 생겨요!"
+
+# 출력
+print(f"당신의 별자리는 {zodiac}입니다!")
+print(f"오늘의 운세: {fortune}")
 
 """
 [실행 결과 예시]

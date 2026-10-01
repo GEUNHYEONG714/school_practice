@@ -15,7 +15,47 @@ seed = int(input("시드 번호를 입력하세요 (아무 숫자): "))
 
 # 아래에 로또 번호 생성 코드를 작성하세요
 # n1 ~ n6 변수에 각각 번호를 저장하세요
+seed = int(input("시드 번호를 입력하세요 (아무 숫자): "))
 
+# 번호 생성
+n1 = seed % 45 + 1
+seed = seed * 3 + 1
+
+n2 = seed % 45 + 1
+seed = seed * 3 + 1
+
+n3 = seed % 45 + 1
+seed = seed * 3 + 1
+
+n4 = seed % 45 + 1
+seed = seed * 3 + 1
+
+n5 = seed % 45 + 1
+seed = seed * 3 + 1
+
+n6 = seed % 45 + 1
+
+# 중복 확인
+if n1 == n2 or n1 == n3 or n1 == n4 or n1 == n5 or n1 == n6:
+    print("중복된 번호가 있습니다.")
+elif n2 == n3 or n2 == n4 or n2 == n5 or n2 == n6:
+    print("중복된 번호가 있습니다.")
+elif n3 == n4 or n3 == n5 or n3 == n6:
+    print("중복된 번호가 있습니다.")
+elif n4 == n5 or n4 == n6:
+    print("중복된 번호가 있습니다.")
+elif n5 == n6:
+    print("중복된 번호가 있습니다.")
+else:
+    # 출력
+    print("=== 로또 번호 ===")
+    print(f"번호 1: {n1}")
+    print(f"번호 2: {n2}")
+    print(f"번호 3: {n3}")
+    print(f"번호 4: {n4}")
+    print(f"번호 5: {n5}")
+    print(f"번호 6: {n6}")
+    print("행운을 빕니다!")
 
 """
 [실행 결과 예시]

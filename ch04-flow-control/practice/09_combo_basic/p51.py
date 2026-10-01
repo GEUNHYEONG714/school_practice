@@ -10,6 +10,7 @@
 힌트: if문으로 각 학생 점수와 비교하여 석차를 계산합니다.
 """
 
+# 아래에 석차 계산 코드를 작성하세요
 print("=== 5명의 점수 입력 ===")
 s1 = int(input("1번 학생 점수: "))
 s2 = int(input("2번 학생 점수: "))
@@ -19,8 +20,39 @@ s5 = int(input("5번 학생 점수: "))
 
 target = int(input("석차를 확인할 학생 번호 (1~5): "))
 
-# 아래에 석차 계산 코드를 작성하세요
+# 대상 학생의 점수 확인
+if target == 1:
+    score = s1
+elif target == 2:
+    score = s2
+elif target == 3:
+    score = s3
+elif target == 4:
+    score = s4
+else:
+    score = s5
 
+# 석차 계산
+rank = 1
+
+if s1 > score:
+    rank += 1
+
+if s2 > score:
+    rank += 1
+
+if s3 > score:
+    rank += 1
+
+if s4 > score:
+    rank += 1
+
+if s5 > score:
+    rank += 1
+
+# 출력
+print(f"{target}번 학생 점수: {score}")
+print(f"석차: {rank}등")
 
 """
 [실행 결과 예시]

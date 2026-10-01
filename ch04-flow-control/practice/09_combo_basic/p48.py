@@ -16,7 +16,25 @@ print("=== 숫자 맞추기 게임 (1~100) ===")
 
 # 아래에 업다운 게임 코드를 작성하세요
 
+while True:
+    # 숫자 입력받기
+    guess = int(input("숫자를 입력하세요: "))
 
+    # 시도 횟수 증가
+    tries += 1
+
+    # 정답 비교
+    if guess < answer:
+        print("UP!")
+
+    elif guess > answer:
+        print("DOWN!")
+
+    else:
+        # 정답 출력
+        print(f"정답입니다! 시도 횟수: {tries}번")
+        break
+    
 """
 [실행 결과 예시]
 === 숫자 맞추기 게임 (1~100) ===
