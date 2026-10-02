@@ -29,7 +29,38 @@ player_hp = int(input("플레이어 HP: "))
 monster_hp = int(input("몬스터 HP: "))
 
 # 아래에 턴제 전투 코드를 작성하세요
+turn = 0
 
+print("=== RPG 전투 시작! ===")
+print(f"플레이어 HP: {player_hp} | 몬스터 HP: {monster_hp}")
+print()
+
+while player_hp > 0 and monster_hp > 0:
+    # 턴 증가
+    turn += 1
+    print(f"--- {turn}턴 ---")
+
+    # 플레이어 공격
+    player_damage = 15 + (turn * 7 + 3) % 11
+    monster_hp -= player_damage
+    print(f"플레이어 공격! 데미지: {player_damage} | 몬스터 HP: {monster_hp}")
+
+    # 몬스터가 쓰러진 경우
+    if monster_hp <= 0:
+        print()
+        print(f"플레이어 승리! ({turn}턴 만에 승리)")
+        break
+
+    # 몬스터 공격
+    monster_damage = 10 + (turn * 13 + 5) % 11
+    player_hp -= monster_damage
+    print(f"몬스터 공격! 데미지: {monster_damage} | 플레이어 HP: {player_hp}")
+    print()
+
+    # 플레이어가 쓰러진 경우
+    if player_hp <= 0:
+        print("몬스터 승리... (플레이어 패배)")
+        break
 
 """
 [실행 결과 예시] (입력: 100, 80)

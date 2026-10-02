@@ -18,6 +18,20 @@ count = int(input("윗몸일으키기 횟수를 입력하세요: "))
 
 # 아래에 코드를 작성하세요
 
+# 등급
+if count >= 60:
+    grade = "A"
+elif count >= 45:
+    grade = "B"
+elif count >= 30:
+    grade = "C"
+elif count >= 15:
+    grade = "D"
+else:
+    grade = "F"
+
+# 출력
+print(f"횟수: {count}회 → 등급: {grade}")
 
 """
 [실행 결과 예시] (입력: 50)
