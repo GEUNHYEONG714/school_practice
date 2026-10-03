@@ -22,7 +22,23 @@ age = int(input("나이를 입력하세요: "))
 time_slot = input("시간대를 입력하세요 (오전/오후): ")
 
 # 아래에 코드를 작성하세요
+# 기본 요금 결정
+if age <= 7:
+    price = 0
+elif age <= 13:
+    price = 3000
+elif age <= 18:
+    price = 5000
+else:
+    price = 8000
 
+# 오후이면 1.5배
+if time_slot == "오후":
+    price = int(price * 1.5)
+
+# 출력
+print(f"나이: {age}세 | 시간대: {time_slot}")
+print(f"입장료: {price}원")
 
 """
 [실행 결과 예시] (입력: 10, 오후)

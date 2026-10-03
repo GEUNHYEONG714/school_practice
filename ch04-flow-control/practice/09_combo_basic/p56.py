@@ -16,7 +16,18 @@ d1 = int(input("첫 번째 주사위: "))
 d2 = int(input("두 번째 주사위: "))
 
 # 아래에 코드를 작성하세요
+# 합 계산
+total = d1 + d2
 
+# 결과 출력
+print(f"주사위: {d1}, {d2}")
+
+if total == 7:
+    print("럭키세븐!")
+elif d1 == d2:
+    print("더블!")
+else:
+    print(f"합: {total}")
 
 """
 [실행 결과 예시] (입력: 3, 4)

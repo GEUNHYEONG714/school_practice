@@ -21,7 +21,22 @@
 salary = int(input("연봉(만원)을 입력하세요: "))
 
 # 아래에 코드를 작성하세요
+tax = 0
 
+# 세금 계산
+if salary <= 1200:
+    tax = salary * 0.06
+elif salary <= 4600:
+    tax = 1200 * 0.06
+    tax += (salary - 1200) * 0.15
+else:
+    tax = 1200 * 0.06
+    tax += (4600 - 1200) * 0.15
+    tax += (salary - 4600) * 0.24
+
+# 출력
+print(f"연봉: {salary}만원")
+print(f"세금: {tax}만원")
 
 """
 [실행 결과 예시] (입력: 5000)

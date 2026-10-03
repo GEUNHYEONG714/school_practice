@@ -23,7 +23,28 @@ weight = int(input("무게(kg)를 입력하세요: "))
 dist = int(input("거리(km)를 입력하세요: "))
 
 # 아래에 코드를 작성하세요
+# 기본 요금
+price = 3000
 
+# 무게 추가 요금
+if weight <= 2:
+    price += 0
+elif weight <= 10:
+    price += 1000
+else:
+    price += 3000
+
+# 거리 추가 요금
+if dist <= 50:
+    price += 0
+elif dist <= 100:
+    price += 1500
+else:
+    price += 3000
+
+# 출력
+print(f"무게: {weight}kg | 거리: {dist}km")
+print(f"택배 요금: {price}원")
 
 """
 [실행 결과 예시] (입력: 5, 80)
