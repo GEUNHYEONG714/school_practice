@@ -20,7 +20,33 @@ hours = int(input("근무시간을 입력하세요: "))
 start = int(input("시작 시각을 입력하세요: "))
 
 # 아래에 코드를 작성하세요
+# 야간 근무시간 계산
+end = start + hours
 
+if start >= 22:
+    night = hours
+elif end <= 22:
+    night = 0
+else:
+    night = end - 22
+
+# 일반 근무시간 계산
+normal = hours - night
+
+# 기본급 계산
+basic = int(normal * wage + night * wage * 1.5)
+
+# 주휴수당 계산
+holiday = int(basic * 0.2)
+
+# 총 급여 계산
+total = basic + holiday
+
+# 출력
+print(f"시급: {wage}원 | 근무: {hours}시간 ({start}시 시작)")
+print(f"기본급: {basic}원")
+print(f"주휴수당: {holiday}원")
+print(f"총 급여: {total}원")
 
 """
 [실행 결과 예시] (입력: 10000, 8, 9)

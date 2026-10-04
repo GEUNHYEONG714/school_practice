@@ -16,6 +16,22 @@ n = int(input("구매 횟수를 입력하세요: "))
 
 # 아래에 코드를 작성하세요
 
+point = 0
+count = 0
+
+# 구매 횟수만큼 반복
+while count < n:
+    price = int(input("음료 가격을 입력하세요: "))
+    point += int(price * 0.05)
+    count += 1
+
+# 스탬프 계산
+stamp = n // 3
+
+# 출력
+print(f"총 구매: {n}잔")
+print(f"총 적립 포인트: {point}점")
+print(f"스탬프: {stamp}개")
 
 """
 [실행 결과 예시] (입력: 3, 4000, 5500, 3000)

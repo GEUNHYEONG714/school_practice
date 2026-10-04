@@ -20,6 +20,19 @@ seat = int(input("좌석번호를 입력하세요: "))
 
 # 아래에 코드를 작성하세요
 
+# 좌석번호 범위 확인
+if seat < 1 or seat > 100:
+    print("잘못된 좌석번호입니다.")
+else:
+    # 열과 좌석 번호 계산
+    row = (seat - 1) // 10
+    num = (seat - 1) % 10 + 1
+
+    # 숫자를 A~J 알파벳으로 변환
+    row = chr(ord("A") + row)
+
+    # 출력
+    print(f"좌석 {seat} → {row}열 {num}번")
 
 """
 [실행 결과 예시] (입력: 25)
