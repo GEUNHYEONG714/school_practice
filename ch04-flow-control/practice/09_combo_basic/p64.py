@@ -14,7 +14,29 @@
 n = int(input("정수 N을 입력하세요: "))
 
 # 아래에 코드를 작성하세요
+count_3 = 0
+count_5 = 0
+count_15 = 0
 
+# 1부터 N까지 반복
+for num in range(1, n + 1):
+
+    # 3의 배수 확인
+    if num % 3 == 0:
+        count_3 += 1
+
+    # 5의 배수 확인
+    if num % 5 == 0:
+        count_5 += 1
+
+    # 3과 5의 공배수 확인
+    if num % 15 == 0:
+        count_15 += 1
+
+# 출력
+print(f"3의 배수: {count_3}개")
+print(f"5의 배수: {count_5}개")
+print(f"3과 5의 공배수: {count_15}개")
 
 """
 [실행 결과 예시] (입력: 15)

@@ -14,7 +14,17 @@ start = int(input("시작단을 입력하세요: "))
 end = int(input("끝단을 입력하세요: "))
 
 # 아래에 코드를 작성하세요
+# 시작단부터 끝단까지 반복
+for dan in range(start, end + 1):
+    print(f"--- {dan}단 ---")
 
+    # 1부터 9까지 반복
+    for num in range(1, 10):
+        # 구구단 계산
+        result = dan * num
+
+        # 출력
+        print(f"{dan} x {num} = {result}")
 
 """
 [실행 결과 예시] (입력: 2, 3)

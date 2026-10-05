@@ -12,7 +12,28 @@
 n = int(input("숫자 개수를 입력하세요: "))
 
 # 아래에 코드를 작성하세요
+positive_sum = 0
+negative_sum = 0
 
+# N개의 숫자를 입력받음
+for _ in range(n):
+    num = int(input())
+
+    # 양수인지 확인
+    if num > 0:
+        positive_sum += num
+
+    # 음수인지 확인
+    elif num < 0:
+        negative_sum += num
+
+# 전체 합 계산
+total_sum = positive_sum + negative_sum
+
+# 출력
+print(f"양수 합: {positive_sum}")
+print(f"음수 합: {negative_sum}")
+print(f"전체 합: {total_sum}")
 
 """
 [실행 결과 예시] (입력: 4, 3, -2, 5, -1)
