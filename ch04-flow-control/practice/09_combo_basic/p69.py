@@ -13,7 +13,11 @@ price = int(input("단가를 입력하세요: "))
 n = int(input("수량범위를 입력하세요: "))
 
 # 아래에 코드를 작성하세요
+for quantity in range(1, n + 1):
+    total = quantity * price
 
+    # 출력
+    print(f"{quantity} x {price} = {total}")
 
 """
 [실행 결과 예시] (입력: 500, 3)

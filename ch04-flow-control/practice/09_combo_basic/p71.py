@@ -15,7 +15,22 @@
 s = input("문자열을 입력하세요: ")
 
 # 아래에 코드를 작성하세요
+count = 1
+max_count = 1
 
+for i in range(1, len(s)):
+    # 이전 문자와 같은지 확인
+    if s[i] == s[i - 1]:
+        count += 1
+    else:
+        count = 1
+
+    # 최대 연속 횟수 갱신
+    if count > max_count:
+        max_count = count
+
+# 출력
+print(max_count)
 
 """
 [실행 결과 예시] (입력: aabbcccaa)

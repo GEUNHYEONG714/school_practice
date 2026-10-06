@@ -12,7 +12,16 @@
 total_seconds = int(input("총 초를 입력하세요: "))
 
 # 아래에 코드를 작성하세요
+# 시
+hour = total_seconds // 3600
+remain = total_seconds % 3600
 
+# 분
+minute = remain // 60
+second = remain % 60
+
+# 출력
+print(f"{hour:02d}:{minute:02d}:{second:02d}")
 
 """
 [실행 결과 예시] (입력: 7385)

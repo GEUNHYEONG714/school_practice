@@ -11,7 +11,21 @@
 num = int(input("3자리 정수를 입력하세요: "))
 
 # 아래에 코드를 작성하세요
+# 각 자리 분리
+hundred = num // 100
+ten = (num // 10) % 10
+one = num % 10
 
+# 합과 곱
+total = hundred + ten + one
+multiply = hundred * ten * one
+
+# 출력
+print(f"백의자리: {hundred}")
+print(f"십의자리: {ten}")
+print(f"일의자리: {one}")
+print(f"합: {total}")
+print(f"곱: {multiply}")
 
 """
 [실행 결과 예시] (입력: 357)
