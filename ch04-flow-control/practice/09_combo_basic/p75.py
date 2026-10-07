@@ -19,8 +19,29 @@ lower = 0
 digit = 0
 other = 0
 # 아래에 코드를 작성하세요
+# 문자열 대입
+for ch in s:
+    # 대문자 확인
+    if ch.isupper():
+        upper += 1
 
+    # 소문자 확인
+    elif ch.islower():
+        lower += 1
 
+    # 숫자 확인
+    elif ch.isdigit():
+        digit += 1
+
+    # 기타 문자
+    else:
+        other += 1
+
+# 출력
+print(f"대문자: {upper}")
+print(f"소문자: {lower}")
+print(f"숫자: {digit}")
+print(f"기타: {other}")
 """
 [실행 결과 예시] (입력: Hello World! 123)
 대문자: 2

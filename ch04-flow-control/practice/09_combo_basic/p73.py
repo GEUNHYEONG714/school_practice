@@ -13,7 +13,24 @@ for문으로 문자열을 순회하며 "@"와 "."의 존재 여부를 확인하�
 s = input("문자열을 입력하세요: ")
 # 아래에 코드를 작성하세요
 
+# 플레그 선언
+at = False
+dot = False
 
+for ch in s:
+    # @ 확인
+    if ch == "@":
+        at = True
+
+    # . 확인
+    if ch == ".":
+        dot = True
+
+# 출력
+if at and dot:
+    print("유효")
+else:
+    print("무효")
 """
 [실행 결과 예시] (입력: user@example.com)
 유효

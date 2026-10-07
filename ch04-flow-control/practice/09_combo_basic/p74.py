@@ -14,7 +14,23 @@ split()을 사용하지 않고, for문으로 문자열을 한 글자씩 순회�
 s = input("문장을 입력하세요: ")
 result = ""
 # 아래에 코드를 작성하세요
+# 플래그 선언
+space = True
 
+for ch in s:
+    # 단어의 첫 글자
+    if space:
+        result += ch.upper()
+        space = False
+    else:
+        result += ch
+
+    # 공백 확인
+    if ch == " ":
+        space = True
+
+# 출력
+print(result)
 
 """
 [실행 결과 예시] (입력: hello world)

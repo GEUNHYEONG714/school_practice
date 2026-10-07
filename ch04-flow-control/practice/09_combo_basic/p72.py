@@ -14,7 +14,18 @@ n = int(input("층수를 입력하세요: "))
 
 # 아래에 코드를 작성하세요
 
+total = 0
 
+for floor in range(1, n + 1):
+    # 현재 층 요금
+    price = floor * 100
+
+    # 누적 요금
+    total += price
+
+    # 출력
+    print(f"{floor}층: {price}원 (누적: {total}원)")
+    
 """
 [실행 결과 예시] (입력: 3)
 1층: 100원 (누적: 100원)
