@@ -14,6 +14,19 @@ s2 = input("두 번째 문자열: ")
 result = ""
 # 아래에 코드를 작성하세요
 
+# 두 문자열 중 긴 길이
+max_len = max(len(s1), len(s2))
+
+# 문자열 교차로 합치기
+for i in range(max_len):
+    if i < len(s1):
+        result += s1[i]
+
+    if i < len(s2):
+        result += s2[i]
+
+# 출력
+print(result)
 
 """
 [실행 결과 예시] (입력: ab, 12)

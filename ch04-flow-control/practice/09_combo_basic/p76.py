@@ -14,8 +14,24 @@ for문으로 문자열을 순회하며 이전 문자와 비교하세요.
 s = input("문자열을 입력하세요: ")
 result = ""
 # 아래에 코드를 작성하세요
+# 첫 번째 문자와 개수 초기화
+char = s[0]
+count = 0
 
+# 문자열 순회
+for i in s:
+    if i == char:
+        count += 1
+    else:
+        result += char + str(count)
+        char = i
+        count = 1
 
+# 마지막 문자와 개수 추가
+result += char + str(count)
+
+# 출력
+print(result)
 """
 [실행 결과 예시] (입력: aabbbcc)
 a2b3c2

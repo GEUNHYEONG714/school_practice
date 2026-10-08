@@ -17,7 +17,21 @@ split() 사용 금지. for문으로 문자열을 순회하며 변환합니다.
 s = input("문자열을 입력하세요: ")
 result = ""
 # 아래에 코드를 작성하세요
+# 플래그 선언
+upper_next = False
 
+# 카멜케이스 변환
+for i in s:
+    if i == "_":
+        upper_next = True
+    elif upper_next:
+        result += i.upper()
+        upper_next = False
+    else:
+        result += i
+
+# 출력
+print(result)
 
 """
 [실행 결과 예시] (입력: hello_world)

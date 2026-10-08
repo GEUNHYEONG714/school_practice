@@ -13,7 +13,15 @@ for문으로 문자열을 순회하며 모음이 아닌 문자만 결과에 추�
 s = input("문장을 입력하세요: ")
 result = ""
 # 아래에 코드를 작성하세요
+vowels = "aeiouAEIOU"
 
+# 모음이 아닌 문자만 추가
+for i in s:
+    if i not in vowels:
+        result += i
+
+# 출력
+print(result)
 
 """
 [실행 결과 예시] (입력: Hello World)
