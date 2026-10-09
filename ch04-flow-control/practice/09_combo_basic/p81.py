@@ -16,6 +16,22 @@ result = ""
 word = ""
 # 아래에 코드를 작성하세요
 
+result = ""
+word = ""
+
+# 단어 뒤집기
+for i in s:
+    if i != " ":
+        word = i + word
+    else:
+        result += word + " "
+        word = ""
+
+# 마지막 단어 추가
+result += word
+
+# 출력
+print(result)
 
 """
 [실행 결과 예시] (입력: hello world)

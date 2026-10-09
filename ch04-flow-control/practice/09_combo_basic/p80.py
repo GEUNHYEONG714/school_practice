@@ -16,7 +16,22 @@ for문으로 문자열을 순회하며 괄호 개수를 세세요.
 
 s = input("문자열을 입력하세요: ")
 # 아래에 코드를 작성하세요
+# 플래그 선언
+open_count = 0
+close_count = 0
 
+# 괄호 개수 세기
+for i in s:
+    if i == "(":
+        open_count += 1
+    elif i == ")":
+        close_count += 1
+
+# 출력
+if open_count == close_count:
+    print("올바름")
+else:
+    print("올바르지 않음")
 
 """
 [실행 결과 예시] (입력: (a+b)*(c+d))

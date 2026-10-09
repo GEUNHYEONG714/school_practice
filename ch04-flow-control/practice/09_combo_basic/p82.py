@@ -17,7 +17,34 @@ s = input("문자열을 입력하세요: ")
 result = ""
 # 아래에 코드를 작성하세요
 
+# ROT13 암호화
+for i in s:
+    # 소문자 처리
+    if "a" <= i <= "z":
+        num = ord(i) + 13
 
+        # 범위 초과 시 순환
+        if num > ord("z"):
+            num -= 26
+
+        result += chr(num)
+
+    # 대문자 처리
+    elif "A" <= i <= "Z":
+        num = ord(i) + 13
+
+        # 범위 초과 시 순환
+        if num > ord("Z"):
+            num -= 26
+
+        result += chr(num)
+
+    # 나머지 문자 유지
+    else:
+        result += i
+
+# 출력
+print(result)
 """
 [실행 결과 예시] (입력: Hello)
 Uryyb
