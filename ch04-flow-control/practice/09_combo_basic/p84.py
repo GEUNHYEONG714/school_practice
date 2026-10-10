@@ -11,7 +11,20 @@
 n = int(input("정수를 입력하세요: "))
 # 아래에 코드를 작성하세요
 
+result = ""
 
+# 8진법 변환
+while n > 0:
+    remainder = n % 8
+    result = str(remainder) + result
+    n //= 8
+
+# 0 입력 처리
+if result == "":
+    result = "0"
+
+# 출력
+print(result)
 """
 [실행 결과 예시] (입력: 10)
 12

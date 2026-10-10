@@ -16,6 +16,20 @@
 
 n = int(input("정수를 입력하세요: "))
 # 아래에 코드를 작성하세요
+divisor = 2
+
+# 소인수분해
+while n > 1:
+    if n % divisor == 0:
+        if result != "":
+            result += " x "
+        result += str(divisor)
+        n //= divisor
+    else:
+        divisor += 1
+
+# 출력
+print(result)
 
 
 """
