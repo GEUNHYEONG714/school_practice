@@ -15,7 +15,20 @@
 
 n = int(input("홀수를 입력하세요: "))
 # 아래에 코드를 작성하세요
+n = int(input("홀수를 입력하세요: "))
 
+# 마름모 출력
+for i in range(n):
+    if i <= n // 2:
+        star = 2 * i + 1
+    else:
+        star = 2 * (n - i) - 1
+
+    # 앞 공백 계산
+    space = (n - star) // 2
+
+    # 별과 공백 출력
+    print(" " * space + "*" * star)
 
 """
 [실행 결과 예시] (입력: 5)

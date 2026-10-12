@@ -19,7 +19,49 @@
 """
 
 # 아래에 코드를 작성하세요
+# 정답 37과 입력한 숫자의 각 자리 비교.
+answer = "37"
+count = 0
 
+# 정답을 맞출 때까지 반복
+while True:
+
+    # 숫자 입력받기
+    num = input()
+    count += 1
+
+    # 십의 자리와 일의 자리 분리
+    first = num[0]
+    second = num[1]
+
+    # 스트라이크와 볼 초기화
+    strike = 0
+    ball = 0
+
+    # 십의 자리 비교
+    if first == answer[0]:
+        strike += 1
+    elif first == answer[1]:
+        ball += 1
+
+    # 일의 자리 비교
+    if second == answer[1]:
+        strike += 1
+    elif second == answer[0]:
+        ball += 1
+
+    # 정답을 맞춘 경우
+    if strike == 2:
+        print(f"정답! {count}번 만에 맞춤")
+        break
+
+    # 스트라이크와 볼이 모두 0인 경우
+    elif strike == 0 and ball == 0:
+        print("아웃")
+
+    # 스트라이크와 볼 출력
+    else:
+        print(f"{strike}스트라이크 {ball}볼")
 
 """
 [실행 결과 예시] (입력: 73, 37)
