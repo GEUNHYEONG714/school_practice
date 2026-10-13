@@ -13,7 +13,23 @@
 
 n = int(input("상품 개수: "))
 # 아래에 코드를 작성하세요
+total = 0
 
+# 입력받은 개수만큼 반복
+for _ in range(n):
+
+    # 상품 가격 입력받기
+    price = int(input())
+
+    # 10000원 이상이면 20% 할인
+    if price >= 10000:
+        price = int(price * 0.8)
+
+    # 할인 적용된 가격 누적
+    total += price
+
+# 출력
+print(f"총액: {total}원")
 
 """
 [실행 결과 예시] (입력: 3, 15000, 8000, 20000)

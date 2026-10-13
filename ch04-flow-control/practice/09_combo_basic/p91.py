@@ -13,7 +13,20 @@
 
 n = int(input("정수를 입력하세요: "))
 # 아래에 코드를 작성하세요
+num = 1
 
+# 행 반복
+for row in range(n):
+
+    # 열 반복
+    for col in range(n):
+
+        # 숫자 출력
+        print(num, end="\t")
+        num += 1
+
+    # 줄바꿈
+    print()
 
 """
 [실행 결과 예시] (입력: 3)

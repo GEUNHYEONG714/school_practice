@@ -15,7 +15,25 @@
 """
 
 # 아래에 코드를 작성하세요
+num_set = set()
 
+# 5번 반복하여 숫자 입력받기
+for _ in range(5):
+    num = int(input())
+    num_set.add(num)
+
+# 빙고판 출력
+for row in range(5):
+
+    # 한 줄에 5개씩 출력
+    for col in range(5):
+        num = row * 5 + col + 1
+
+        # 입력한 숫자는 X로 표시
+        if num in num_set:
+            print("X", end="\t")
+        else:
+            print(num, end="\t")
 
 """
 [실행 결과 예시] (입력: 1, 7, 13, 19, 25)
