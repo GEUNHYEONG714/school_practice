@@ -15,7 +15,23 @@
 n = int(input("비밀번호 길이: "))
 
 # 아래에 코드를 작성하세요
+password = ""
 
+# 입력받은 길이만큼 반복
+for i in range(n):
+
+    # 홀수 번째 자리는 알파벳
+    if i % 2 == 0:
+        alpha = chr(ord("a") + (i // 2) % 26)
+        password += alpha
+
+    # 짝수 번째 자리는 숫자
+    else:
+        num = (i // 2 + 1) % 10
+        password += str(num)
+
+# 출력
+print(password)
 
 """
 [실행 결과 예시]

@@ -15,7 +15,32 @@
 total = 0
 
 # 아래에 코드를 작성하세요
+# 3번 반복
+for _ in range(3):
 
+    # 숫자와 연산자 입력받기
+    num1, op, num2 = input().split()
+    num1 = int(num1)
+    num2 = int(num2)
+
+    # 연산자에 따라 계산
+    if op == "+":
+        cal = num1 + num2
+    elif op == "-":
+        cal = num1 - num2
+    elif op == "*":
+        cal = num1 * num2
+    elif op == "/":
+        cal = num1 // num2
+
+    # 연산 결과 출력
+    print(cal)
+
+    # 합계 누적
+    total += cal
+
+# 최종 합계 출력
+print(f"합계: {total}")
 
 """
 [실행 결과 예시]
