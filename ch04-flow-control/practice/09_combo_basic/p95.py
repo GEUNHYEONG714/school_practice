@@ -20,7 +20,23 @@ start_day = int(input("시작 요일(1=월~7=일): "))
 last_date = int(input("마지막 날짜: "))
 
 # 아래에 코드를 작성하세요
+print("월  화  수  목  금  토  일")
 
+# 시작 요일 전까지 빈 칸 출력
+print("    " * (start_day - 1), end="")
+
+# 날짜 반복
+for date in range(1, last_date + 1):
+
+    # 날짜 출력
+    print(f"{date:2}", end="  ")
+
+    # 일요일까지 출력하면 줄바꿈
+    if (start_day + date - 1) % 7 == 0:
+        print()
+
+# 마지막 줄 줄바꿈
+print()
 
 """
 [실행 결과 예시]

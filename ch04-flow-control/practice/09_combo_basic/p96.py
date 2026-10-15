@@ -16,7 +16,31 @@
 shape = input("도형(원/삼각형/사각형): ")
 
 # 아래에 코드를 작성하세요
+# 원의 넓이 계산
+if shape == "원":
+    harf = int(input("반지름: "))
+    area = harf * harf * 3.14
 
+    # 소수점 둘째 자리까지 출력
+    print(f"넓이: {area:.2f}")
+
+# 삼각형의 넓이 계산
+elif shape == "삼각형":
+    width = int(input("밑변: "))
+    height = int(input("높이: "))
+    area = width * height / 2
+
+    # 소수점 첫째 자리까지 출력
+    print(f"넓이: {area:.1f}")
+
+# 사각형의 넓이 계산
+elif shape == "사각형":
+    width = int(input("가로: "))
+    height = int(input("세로: "))
+    area = width * height
+
+    # 출력
+    print(f"넓이: {area}")
 
 """
 [실행 결과 예시]
