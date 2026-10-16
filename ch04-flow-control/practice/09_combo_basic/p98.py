@@ -20,8 +20,30 @@
 num = int(input("숫자(1~9999): "))
 
 # 아래에 코드를 작성하세요
+# 리스트 작성
+number_list = ["", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
+unit_list = ["", "십", "백", "천"]
 
+# 초기화
+result = ""
 
+# 각 자릿수 확인
+for i in range(3, -1, -1):
+
+    # 현재 자릿수 숫자 구하기
+    digit = num // (10 ** i) % 10
+    
+    # 숫자가 0이 아닌 경우
+    if digit != 0:
+
+        # 숫자가 1이면 일 생략
+        if digit == 1 and i > 0:
+            result += unit_list[i]
+        else:
+            result += number_list[digit] + unit_list[i]
+
+# 결과 출력
+print(result)
 """
 [실행 결과 예시]
 숫자(1~9999): 1234

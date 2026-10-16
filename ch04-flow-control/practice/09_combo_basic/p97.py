@@ -18,6 +18,37 @@ n = int(input("학생 수: "))
 # 아래에 코드를 작성하세요
 
 
+# 구간별 인원수 초기화
+scores = [0] * 10
+
+# 학생 수만큼 점수 입력받기
+for _ in range(n):
+    score = int(input())
+
+    # 점수에 따른 구간 계산
+    index = score // 10
+
+    # 100점은 마지막 구간에 저장
+    if index == 10:
+        index = 9
+
+    # 구간별 인원수 증가
+    scores[index] += 1
+
+# 구간별 히스토그램 출력
+for i in range(10):
+
+    # 인원이 있는 구간만 출력
+    if scores[i] > 0:
+
+        # 구간 이름 설정
+        if i == 9:
+            section = "90~100"
+        else:
+            section = f"{i * 10}~{i * 10 + 9}"
+
+        # 인원수만큼 # 출력
+        print(f"{section}: {'#' * scores[i]}")
 """
 [실행 결과 예시]
 학생 수: 5
