@@ -21,7 +21,31 @@
 balance = int(input("초기 잔액: "))
 
 # 아래에 코드를 작성하세요
+# 3번 처리
+for _ in range(3):
+    # 거래 입력받기
+    trade = input().split()
 
+    # 거래 종류 확인
+    if trade[0] == "입금":
+        balance += int(trade[1])
+        print(f"입금 완료: 잔액 {balance}원")
+
+    elif trade[0] == "출금":
+        money = int(trade[1])
+
+        # 잔액이 충분한지 확인
+        if balance >= money:
+            balance -= money
+            print(f"출금 완료: 잔액 {balance}원")
+        else:
+            print("출금 실패: 잔액 부족")
+
+    elif trade[0] == "조회":
+        print(f"현재 잔액: {balance}원")
+
+# 최종 잔액 출력
+print(f"최종 잔액: {balance}원")
 
 """
 [실행 결과 예시]

@@ -21,7 +21,39 @@
 n = int(input("판 수: "))
 
 # 아래에 코드를 작성하세요
+# 초기화
+computer = ["바위", "보", "가위"]
+win = 0
+lose = 0
+draw = 0
 
+# 입력받은 판 수만큼 반복
+for i in range(n):
+
+    # 플레이어 선택 입력받기
+    player = input()
+
+    # 컴퓨터 선택 결정
+    com = computer[i % 3]
+
+    # 승패 판정
+    if player == com:
+        result = "무"
+        draw += 1
+    elif (player == "가위" and com == "보") or \
+         (player == "바위" and com == "가위") or \
+         (player == "보" and com == "바위"):
+        result = "승"
+        win += 1
+    else:
+        result = "패"
+        lose += 1
+
+    # 각 판 결과 출력
+    print(f"{i + 1}판: 플레이어({player}) vs 컴퓨터({com}) -> {result}")
+
+# 최종 전적 출력
+print(f"전적: {win}승 {lose}패 {draw}무")
 
 """
 [실행 결과 예시]
