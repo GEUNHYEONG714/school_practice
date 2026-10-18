@@ -16,7 +16,21 @@ sentence = input("문장: ")
 banned = input("금지어: ")
 
 # 아래에 코드를 작성하세요
+result = ""
+index = 0
 
+# 문장을 순회하며 금지어 확인
+while index < len(sentence):
+    # 현재 위치부터 금지어 길이만큼 비교
+    if sentence[index:index + len(banned)] == banned:
+        result += "***"
+        index += len(banned)
+    else:
+        result += sentence[index]
+        index += 1
+
+# 결과 출력
+print(result)
 
 """
 [실행 결과 예시]
