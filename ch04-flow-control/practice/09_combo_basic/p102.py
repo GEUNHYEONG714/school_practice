@@ -22,7 +22,29 @@
 n = int(input("과목 수: "))
 
 # 아래에 코드를 작성하세요
+# 1~6교시 과목 초기화
+timetable = ["-"] * 6
 
+# 과목 수만큼 반복
+for _ in range(n):
+    # 과목 정보 입력받기
+    name, start, end = input().split()
+    start = int(start)
+    end = int(end)
+
+    # 해당 교시에 과목 저장
+    for index in range(start - 1, end):
+        # 비어 있는 교시에만 과목 저장
+        if timetable[index] == "-":
+            timetable[index] = name
+
+# 시간표 제목 출력
+print("교시 | 과목")
+print("-----|------")
+
+# 1교시부터 6교시까지 출력
+for index in range(6):
+    print(f"{index + 1}교시 | {timetable[index]}")
 
 """
 [실행 결과 예시]
