@@ -12,7 +12,28 @@
 n = int(input("N을 입력하세요: "))
 
 # 아래에 1~N 사이 소수를 모두 출력하는 코드를 작성하세요
+count = 0
 
+# 2부터 N까지 반복
+for num in range(2, n + 1):
+    # 플래그 선언
+    is_prime = True
+
+    # 2부터 num-1까지 약수 확인
+    for i in range(2, num):
+        # 나누어떨어지면 소수가 아님
+        if num % i == 0:
+            is_prime = False
+            break
+
+    # 소수이면 출력하고 개수 증가
+    if is_prime:
+        print(num, end=" ")
+        count += 1
+
+# 소수 개수 출력
+print()
+print(f"소수 개수: {count}")
 
 """
 [실행 결과 예시]

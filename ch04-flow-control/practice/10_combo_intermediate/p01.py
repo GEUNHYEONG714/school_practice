@@ -15,7 +15,21 @@ num = int(input("2 이상의 정수를 입력하세요: "))
 
 # 아래에 소수 판별 코드를 작성하세요
 
+# 플레그 선언
+is_prime = True
 
+# 2부터 num-1까지 반복
+for i in range(2, num):
+    # 나누어 떨어지면 소수가 아님
+    if num % i == 0:
+        is_prime = False
+        break
+
+# 결과 출력
+if is_prime:
+    print(f"{num}은(는) 소수입니다.")
+else:
+    print(f"{num}은(는) 소수가 아닙니다.")
 """
 [실행 결과 예시]
 2 이상의 정수를 입력하세요: 7
