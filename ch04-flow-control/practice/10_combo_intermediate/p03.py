@@ -14,7 +14,22 @@
 n = int(input("N을 입력하세요: "))
 
 # 아래에 1~N 사이 완전수를 찾는 코드를 작성하세요
+# 1부터 N까지 반복
+for num in range(2, n + 1):
+    # 약수의 합과 약수 목록 초기화
+    total = 0
+    divisor_list = []
 
+    # 자기 자신을 제외한 약수 확인
+    for index in range(1, num // 2 + 1):
+        # 나누어떨어지면 약수에 추가
+        if num % index == 0:
+            total += index
+            divisor_list.append(index)
+
+    # 약수의 합이 자기 자신과 같으면 완전수
+    if total == num:
+        print(f"{num} = {' + '.join(map(str, divisor_list))}")
 
 """
 [실행 결과 예시]
