@@ -14,7 +14,30 @@
 n = int(input("N을 입력하세요: "))
 
 # 아래에 1! + 2! + ... + N! 을 구하는 코드를 작성하세요
+# 변수 초기화
+factorial = 1
+total = 0
+result = ""
 
+# 1부터 N까지 반복
+for i in range(1, n + 1):
+    # 팩토리얼 계산
+    factorial *= i
+
+    # 팩토리얼 출력
+    print(f"{i}! = {factorial}")
+
+    # 팩토리얼 합 계산
+    total += factorial
+
+    # 합 출력에 필요한 항 연결
+    if i == 1:
+        result = "1!"
+    else:
+        result += f" + {i}!"
+
+# 최종 결과 출력
+print(f"{result} = {total}")
 
 """
 [실행 결과 예시]
