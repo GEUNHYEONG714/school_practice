@@ -12,10 +12,20 @@ bin() 내장 함수를 사용하지 않고 직접 구현합니다.
 """
 
 num = int(input("양의 정수를 입력하세요: "))
-
+first_num = num  # 처음 입력한 값 저장
+num_str = ""  # 2진수 문자열 초기화
 # 아래에 10진수를 2진수로 변환하는 코드를 작성하세요
 
+# 반복
+while num > 0:
+    remainder = num % 2
+    num_str += str(remainder) # 나머지를 문자열에 추가
+    num = num // 2
+    # 변환 과정 출력
+    print(f"  {num * 2 + remainder} ÷ 2 = {num} ... 나머지 {remainder}")
 
+# 최종 결과 출력
+print(f"{first_num} → 2진수: {num_str[::-1]}")
 """
 [실행 결과 예시]
 양의 정수를 입력하세요: 25
