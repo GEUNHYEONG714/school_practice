@@ -13,7 +13,18 @@
 """
 
 # 아래에 3자리 암스트롱 수를 모두 찾는 코드를 작성하세요
+for num in range(100, 1000):
+    # 각 자릿수 분리
+    hundred = num // 100        # 백의 자리
+    ten = (num // 10) % 10     # 십의 자리
+    one = num % 10             # 일의 자리
 
+    # 각 자릿수 세제곱 합 계산
+    armstrong = (hundred ** 3) + (ten ** 3) + (one ** 3)
+
+    # 합이 원래 수와 같으면 암스트롱 수
+    if armstrong == num:
+        print(f"{num} = {hundred}^3 + {ten}^3 + {one}^3")
 
 """
 [실행 결과 예시]
