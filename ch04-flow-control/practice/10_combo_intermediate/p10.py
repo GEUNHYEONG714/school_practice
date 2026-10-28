@@ -18,7 +18,21 @@
 n = int(input("N을 입력하세요: "))
 
 # 아래에 1~N 사이 카프리카 수를 찾는 코드를 작성하세요
+# 입력 받은 값 n에 대해 1부터 n까지 반복하면서 각 수가 카프리카 수인지 확인
+for num in range(1, n + 1):
+    # num의 제곱 계산
+    square = num ** 2
+    left_num = square // (10 ** len(str(num)))
+    right_num = square % (10 ** len(str(num)))
 
+
+    if num == 1:
+        print(1)
+        continue
+    
+    # 카프리카 수인지 확인 (오른쪽 부분이 0이 아닌 경우)
+    if right_num != 0 and left_num + right_num == num:
+        print(f"{num}: {num}^2 = {square}, {left_num} + {right_num} = {num}")
 
 """
 [실행 결과 예시]
