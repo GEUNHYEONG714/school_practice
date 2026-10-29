@@ -9,10 +9,33 @@
 """
 
 N = int(input("N을 입력하세요: "))
-
+before_num = 2
 # 아래에 1~N 사이의 쌍둥이 소수 쌍을 출력하는 코드를 작성하세요
 
+# 2부터 N까지 반복
+for num in range(2, N + 1):
+    # 소수 판별을 위한 플래그 변수
+    is_prime = True
+    
+    
+    # num이 소수인지 판별하기
+    for i in range(2, num):
+        
+        # num이 i로 나누어 떨어지면 소수가 아님
+        if num % i == 0:
+            is_prime = False
+            continue
+        
+    if is_prime:
+        # num이 소수인 경우, 이전 소수와의 차이가 2인지 확인
+        if num - before_num == 2:
+            print(f"({before_num}, {num})")
 
+        # 현재 소수를 이전 소수로 저장
+        before_num = num
+        
+        
+        
 """
 [실행 결과 예시] (N=50)
 (3, 5)
