@@ -11,7 +11,15 @@
 N = int(input("N을 입력하세요: "))
 
 # 아래에 1~N 사이의 완전제곱수를 출력하세요
+# 1부터 순서대로 제곱
+for num in range(1, N + 1):
+    square = num * num
 
+    # N 이하인 경우 출력
+    if square <= N:
+        print(square)
+    else:
+        break
 
 """
 [실행 결과 예시] (N=50)
