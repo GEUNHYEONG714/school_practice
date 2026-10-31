@@ -10,9 +10,21 @@
 """
 
 N = int(input("N을 입력하세요: "))
+divisors = [2, 3, 5]
 
-# 아래에 1~N 사이의 해밍수를 출력하세요
-
+for num in range(1, N + 1):
+    cp_num = num
+    
+    # 약수 대입
+    for index_num in divisors:
+        
+        # 0이 될 때까지 나누기
+        while cp_num % index_num == 0:
+            cp_num //= index_num
+            
+    # 1이되면 출력
+    if cp_num == 1:
+        print(num)
 
 """
 [실행 결과 예시] (N=30)
